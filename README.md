@@ -71,6 +71,14 @@ Essa separação permite preservar o trabalho acadêmico original enquanto uma e
 
 O portfólio possui um ambiente Docker para facilitar sua execução entre os integrantes da equipe e reduzir problemas relacionados a versões e dependências.
 
+### 1º Passo - Acessar a pasta que contém o repositório
+
+```bash
+cd UFFa
+```
+
+### 2º Passo - Rodar o Docker
+
 ```bash
 docker compose up --build
 ```
