@@ -1,0 +1,17 @@
+services:
+  site:
+    build:
+      context: ./site
+      dockerfile: Dockerfile
+    container_name: uffa_site
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - FIGMA_DEV_SERVER_HOST=0.0.0.0
+      - NODE_ENV=development
+    volumes:
+      # Mapeia as alterações locais em tempo real para o container
+      - ./site:/app
+      # Isola o node_modules interno do container para evitar conflitos com o host
+      - /app/node_modules
