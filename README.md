@@ -83,6 +83,12 @@ cd UFFa
 docker compose up --build
 ```
 
+### 3º Passo - Acessar página na web
+
+```bash
+http://localhost:3000/
+```
+
 Após a inicialização, o endereço para acesso ao portfólio será informado conforme a configuração do projeto.
 
 ## 🛣️ Roadmap
