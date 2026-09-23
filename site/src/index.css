@@ -2,13 +2,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-uffa-bg: #F8F7F3;
-  --color-uffa-navy: #17233C;
-  --color-uffa-blue: #2457A6;
-  --color-uffa-yellow: #FFD447;
-  --color-uffa-green: #65C466;
-  --color-uffa-coral: #F2766B;
-  --color-uffa-lightblue: #EAF1FA;
+  --color-uffa-bg: #F7F4EE;
+  --color-uffa-navy: #0A1828;
+  --color-uffa-blue: #178582;
+  --color-uffa-yellow: #BFA181;
+  --color-uffa-green: #4A9C99;
+  --color-uffa-coral: #9A7B5A;
+  --color-uffa-lightblue: #E7EFED;
 
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
@@ -17,13 +17,13 @@
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F8F7F3;
-  color: #17233C;
+  background-color: var(--color-uffa-bg);
+  color: var(--color-uffa-navy);
   font-family: 'DM Sans', system-ui, sans-serif;
 }
 
