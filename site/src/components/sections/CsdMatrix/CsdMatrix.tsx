@@ -3,11 +3,14 @@ import { CSD_DATA, CSD_DATA_AFTER } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
 
+// Se colocar o arquivo na pasta src/assets, descomente a linha abaixo:
+// import csdPdf from "../../../assets/matriz-csd-uffa.pdf";
+
 function MatrixColumns({ data, badgeLabel }) {
   return (
     <div className="flex-1">
       {badgeLabel && (
-        <div className="mb-6 flex items-center justify-between border-b border-uffa-navy/10 pb-3">
+        <div className="mb-6 flex items-center justify-between border-b border-uffa-navy/30 pb-3">
           <span className="text-sm font-bold uppercase tracking-wider text-uffa-navy">
             {badgeLabel}
           </span>
@@ -21,7 +24,7 @@ function MatrixColumns({ data, badgeLabel }) {
         {/* Certezas */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-3 h-3 rounded-full bg-uffa-tractorgreen" />
+            <span className="w-3 h-3 rounded-full bg-uffa-green/70" />
             <span className="text-xs font-semibold tracking-widest uppercase text-uffa-navy/70">
               Certezas ({data.certezas.length})
             </span>
@@ -35,7 +38,7 @@ function MatrixColumns({ data, badgeLabel }) {
               return (
                 <div
                   key={i}
-                  className="bg-uffa-tractorgreen/15 border border-uffa-tractorgreen/30 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-tractorgreen/20 transition-colors flex flex-col justify-between gap-3 shadow-xs"
+                  className="bg-uffa-green/15 border border-uffa-green/30 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-tractorgreen/20 transition-colors flex flex-col justify-between gap-3 shadow-xs"
                 >
                   <p>{textContent}</p>
                   {link && (
@@ -70,7 +73,7 @@ function MatrixColumns({ data, badgeLabel }) {
         {/* Suposições */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-3 h-3 rounded-full bg-uffa-gold" />
+            <span className="w-3 h-3 rounded-full bg-uffa-yellow/70" />
             <span className="text-xs font-semibold tracking-widest uppercase text-uffa-navy/70">
               Suposições ({data.suposicoes.length})
             </span>
@@ -79,7 +82,7 @@ function MatrixColumns({ data, badgeLabel }) {
             {data.suposicoes.map((item, i) => (
               <div
                 key={i}
-                className="bg-uffa-gold/20 border border-uffa-gold/40 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-gold/30 transition-colors shadow-xs"
+                className="bg-uffa-yellow/20 border border-uffa-yellow/40 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-yellow/30 transition-colors shadow-xs"
               >
                 {item}
               </div>
@@ -90,7 +93,7 @@ function MatrixColumns({ data, badgeLabel }) {
         {/* Dúvidas */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-3 h-3 rounded-full bg-uffa-coral" />
+            <span className="w-3 h-3 rounded-full bg-uffa-red/70" />
             <span className="text-xs font-semibold tracking-widest uppercase text-uffa-navy/70">
               Dúvidas ({data.duvidas.length})
             </span>
@@ -99,7 +102,7 @@ function MatrixColumns({ data, badgeLabel }) {
             {data.duvidas.map((item, i) => (
               <div
                 key={i}
-                className="bg-uffa-coral/12 border border-uffa-coral/30 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-coral/18 transition-colors shadow-xs"
+                className="bg-uffa-red/12 border border-uffa-red/30 rounded-xl p-4 text-sm text-uffa-navy leading-relaxed hover:bg-uffa-red/18 transition-colors shadow-xs"
               >
                 {item}
               </div>
@@ -114,12 +117,14 @@ function MatrixColumns({ data, badgeLabel }) {
 export function CsdMatrix() {
   const [viewMode, setViewMode] = useState("all"); // 'before' | 'after' | 'all'
 
+  const pdfDownloadUrl = "public/matriz-csd-uffa.pdf";
+
   return (
     <section id="descobertas" className="relative py-24 px-6 bg-uffa-lightblue">
       <SectionImage image="image1" />
       <div
         className={`mx-auto transition-all duration-300 ${
-          viewMode === "all" ? "max-w-7xl" : "max-w-5xl"
+          viewMode === "all" ? "max-w-4/5" : "max-w-5xl"
         }`}
       >
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -197,6 +202,36 @@ export function CsdMatrix() {
             </div>
           </div>
         )}
+
+        {/* Bloco de Download do PDF */}
+        <div className="mt-12 p-6 rounded-2xl bg-white/50 border border-uffa-navy/10 backdrop-blur-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-uffa-navy/10 text-uffa-navy flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-uffa-navy">
+                Matriz CSD Completa (PDF)
+              </h4>
+              <p className="text-xs text-uffa-navy/60">
+                Baixe o documento com as certezas, suposições e dúvidas.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={pdfDownloadUrl}
+            download="Matriz-CSD-UFFa.pdf"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-uffa-navy hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Baixar PDF
+          </a>
+        </div>
       </div>
     </section>
   );

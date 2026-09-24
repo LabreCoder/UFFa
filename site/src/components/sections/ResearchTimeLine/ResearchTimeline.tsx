@@ -9,7 +9,7 @@ const RESEARCH_STEPS = [
     done: true,
   },
   {
-    label: "How Might We (Como Poderíamos?)",
+    label: "How Might We",
     desc: "Reformulação das principais dores e desafios em perguntas norteadoras de oportunidade para orientar a geração de soluções.",
     done: true,
   },
