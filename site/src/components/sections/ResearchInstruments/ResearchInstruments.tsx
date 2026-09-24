@@ -53,7 +53,7 @@ export function ResearchInstruments() {
               ))}
             </div>
 
-            <div className="mt-8 bg-uffa-yellow/15 border border-uffa-yellow/40 rounded-xl p-4">
+            <div className="mt-8 bg-uffa-gold/15 border border-uffa-gold/40 rounded-xl p-4">
               <p className="text-xs text-uffa-navy/70 leading-relaxed">
                 <strong>Nota:</strong> Nenhum número apresentado aqui é dado coletado — são metas e definições do instrumento de pesquisa.
               </p>

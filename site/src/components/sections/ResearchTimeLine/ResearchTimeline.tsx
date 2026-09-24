@@ -1,7 +1,44 @@
-import { RESEARCH_STEPS } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { Badge } from "../../ui/Badge";
 import { SectionImage } from "../../ui/SectionImage";
+
+const RESEARCH_STEPS = [
+  {
+    label: "Análise da Situação Atual",
+    desc: "Mapeamento do contexto e dos atores envolvidos no processo de achados e perdidos nos campi.",
+    done: true,
+  },
+  {
+    label: "How Might We (Como Poderíamos?)",
+    desc: "Reformulação das principais dores e desafios em perguntas norteadoras de oportunidade para orientar a geração de soluções.",
+    done: true,
+  },
+  {
+    label: "Matriz CSD",
+    desc: "Organização das certezas, suposições e dúvidas do grupo sobre o problema.",
+    done: true,
+  },
+  {
+    label: "Análise Competitiva",
+    desc: "Estudo de soluções existentes — diretas, indiretas e inspiradoras.",
+    done: true,
+  },
+  {
+    label: "Mapa de Empatia",
+    desc: "Hipóteses sobre o que o utilizador faz, fala, pensa e sente nessa situação.",
+    done: true,
+  },
+  {
+    label: "Roteiro de Entrevistas & Questionário",
+    desc: "Instrumento semiestruturado definido para quem perdeu, encontrou, docentes, técnicos e atendentes, acompanhado de instrumento quantitativo para ampliar a escala da recolha.",
+    done: true,
+  },
+  {/*
+    label: "Entrevistas em Profundidade",
+    desc: "Realização de conversas qualitativas detalhadas com os intervenientes para aprofundar narrativas, validar hipóteses e mapear a jornada real.",
+    done: false,
+  */},
+];
 
 export function ResearchTimeline() {
   return (
@@ -42,7 +79,7 @@ export function ResearchTimeline() {
                   className={`flex-1 rounded-2xl p-6 border transition-all duration-200 ${
                     step.done
                       ? "bg-white border-uffa-navy/8 hover:shadow-sm"
-                      : "bg-uffa-yellow/10 border-uffa-yellow/40"
+                      : "bg-uffa-gold/10 border-uffa-gold/40"
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-2">

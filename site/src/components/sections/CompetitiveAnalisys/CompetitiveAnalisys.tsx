@@ -34,11 +34,11 @@ export function CompetitiveAnalysis() {
 
         {/* Oportunidades */}
         <div className="bg-uffa-navy rounded-3xl p-8 md:p-10">
-          <p className="text-xs font-semibold tracking-widest uppercase text-uffa-yellow mb-6">Oportunidades Identificadas</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-uffa-gold mb-6">Oportunidades Identificadas</p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
             {OPPORTUNITIES.map((opp, i) => (
               <div key={i} className="flex items-start gap-3 bg-white/6 rounded-xl px-4 py-3">
-                <span className="text-uffa-yellow mt-0.5">→</span>
+                <span className="text-uffa-gold mt-0.5">→</span>
                 <span className="text-white/85 text-sm leading-relaxed">{opp}</span>
               </div>
             ))}

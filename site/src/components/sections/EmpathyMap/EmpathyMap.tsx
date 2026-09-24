@@ -13,7 +13,7 @@ export function EmpathyMap() {
             className="mb-0"
           />
         </div>
-        <p className="text-sm text-uffa-navy/60 mb-12 max-w-lg leading-relaxed bg-uffa-yellow/20 border border-uffa-yellow/40 rounded-xl px-4 py-3 inline-block">
+        <p className="text-sm text-uffa-navy/60 mb-12 max-w-lg leading-relaxed bg-uffa-gold/20 border border-uffa-gold/40 rounded-xl px-4 py-3 inline-block">
           <strong>Atenção:</strong> Este mapa representa hipóteses de investigação a validar — não dados coletados.
         </p>
 

@@ -10,7 +10,7 @@ export function Problem() {
       <div className="relative z-10 max-w-5xl mx-auto">
         <SectionHeader
           tag="O Problema"
-          tagColor="text-uffa-coral"
+          tagColor="text-uffa-red/85"
           title={<>A busca passa por canais<br />dispersos e desconectados</>}
           description="Quando alguém perde um objeto nos campi da UFF em Niterói, o processo de recuperação depende de iniciativa própria e sorte — não de um sistema claro. Parte da nossa investigação é entender como isso funciona na prática."
           className="mb-16"
@@ -28,10 +28,16 @@ export function Problem() {
           ))}
         </div>
 
-        <div className="bg-uffa-navy rounded-3xl px-8 py-10 md:px-14 md:py-12 flex flex-col md:flex-row items-start md:items-center gap-6">
-          <div className="w-1 h-16 bg-uffa-yellow rounded-full shrink-0 hidden md:block" />
-          <p className="font-display text-3xl md:text-4xl text-white italic leading-snug">
-            "A informação existe,<br />mas está espalhada."
+        <div className="bg-uffa-navy rounded-3xl px-8 py-10 md:px-14 md:py-12 flex flex-col md:flex-row items-start md:items-center md:justify-between gap-6 w-full">
+          <div className="flex items-center gap-6">
+            <div className="w-1 h-16 bg-uffa-gold rounded-full shrink-0 hidden md:block" />
+            <p className="font-display text-3xl md:text-4xl text-white italic leading-snug">
+              "A informação existe,
+            </p>
+          </div>
+          
+          <p className="font-display text-3xl md:text-4xl text-white italic leading-snug md:text-right">
+            mas está espalhada."
           </p>
         </div>
       </div>

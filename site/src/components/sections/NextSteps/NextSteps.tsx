@@ -9,7 +9,7 @@ export function NextSteps() {
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           tag="Próximos Passos"
-          tagColor="text-uffa-green/70"
+          tagColor="text-uffa-tractorgreen/70"
           title={<span className="text-white">O que vem a seguir</span>}
           description="A pesquisa está em andamento. Estes são os passos planejados antes de propor qualquer solução."
         />
@@ -20,7 +20,7 @@ export function NextSteps() {
               key={i}
               className="flex items-start gap-6 bg-white/5 hover:bg-white/8 border border-white/10 rounded-2xl px-6 py-5 transition-colors duration-200 group"
             >
-              <span className="font-display text-4xl text-uffa-green/40 group-hover:text-uffa-green/60 transition-colors shrink-0 leading-none mt-1">
+              <span className="font-display text-4xl text-uffa-tractorgreen/40 group-hover:text-uffa-tractorgreen/60 transition-colors shrink-0 leading-none mt-1">
                 {step.num}
               </span>
               <div>
