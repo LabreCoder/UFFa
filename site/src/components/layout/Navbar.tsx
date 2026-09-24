@@ -21,10 +21,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-uffa-navy ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-uffa-lightblue ${
         scrolled
-          ? "bg-white/95 backdrop-blur-sm border-b border-uffa-navy/10 shadow-sm"
-          : "bg-transparent border-uffa-navy/10"
+          ? "bg-uffa-lightblue backdrop-blur-sm border-b border-uffa-navy/10 shadow-sm"
+          : "bg-uffa-lightblue border-uffa-navy/10"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
