@@ -29,6 +29,11 @@ export const RESEARCH_STEPS: ResearchStep[] = [
     done: true,
   },
   {
+    label: "How Might We (Como Poderíamos?)",
+    desc: "Reformulação das principais dores e desafios em perguntas norteadoras de oportunidade para orientar a geração de soluções.",
+    done: true,
+  },
+  {
     label: "Análise Competitiva",
     desc: "Estudo de soluções existentes — diretas, indiretas e inspiradoras.",
     done: true,
@@ -39,22 +44,23 @@ export const RESEARCH_STEPS: ResearchStep[] = [
     done: true,
   },
   {
-    label: "Roteiro de Entrevistas",
-    desc: "Instrumento semiestruturado definido para quem perdeu, encontrou, docentes, técnicos e atendentes.",
+    label: "Roteiro de Entrevistas & Questionário",
+    desc: "Instrumento semiestruturado definido para quem perdeu, encontrou, docentes, técnicos e atendentes, acompanhado do questionário quantitativo.",
     done: true,
   },
   {
-    label: "Questionário",
-    desc: "Instrumento quantitativo elaborado para ampliar a escala da coleta.",
+    label: "Coleta Quantitativa",
+    desc: "Aplicação e distribuição do questionário estruturado para obter escala e dados estatísticos.",
     done: true,
   },
   {
-    label: "Coleta de Campo",
-    desc: "Realização das entrevistas e aplicação do questionário — em andamento.",
+    label: "Entrevistas em Profundidade",
+    desc: "Realização de conversas qualitativas semiestruturadas com os perfis para aprofundar narrativas e mapear gargalos reais.",
     done: false,
   },
 ];
 
+// Matriz inicial (Antes da consultoria)
 export const CSD_DATA: CsdData = {
   certezas: [
     "É uma dor dos alunos da UFF",
@@ -84,6 +90,75 @@ export const CSD_DATA: CsdData = {
   ],
 };
 
+// Matriz refinada após a consultoria com as correções (certezas com links de embasamento)
+export const CSD_DATA_AFTER = {
+  suposicoes: [...CSD_DATA.suposicoes],
+  duvidas: [...CSD_DATA.duvidas],
+  certezas: [
+    {
+      texto: "É uma dor dos alunos da UFF",
+      link: {
+        rotulo: "Relatos e discussões discentes",
+        url: "https://www.uff.br",
+      },
+    },
+    {
+      texto: "É necessário um canal de divulgação da nossa solução",
+      link: {
+        rotulo: "Diretrizes de comunicação UFF",
+        url: "https://www.uff.br/comunicacao",
+      },
+    },
+    {
+      texto: "Há muita desinformação sobre como recuperar objetos perdidos",
+      link: {
+        rotulo: "Mapeamento dos postos de atendimento",
+        url: "https://www.uff.br",
+      },
+    },
+    {
+      texto: "Há muita desinformação sobre como devolver objetos achados",
+      link: {
+        rotulo: "Normas de recolha e devolução",
+        url: "https://www.uff.br",
+      },
+    },
+    {
+      texto: "O projeto tem como objetivo facilitar a conexão entre quem perdeu e quem encontrou um objeto",
+      link: {
+        rotulo: "Declaração de escopo e proposta de valor",
+        url: "https://www.uff.br",
+      },
+    },
+    {
+      texto: "A plataforma pode possuir filtros por campus, categoria e período",
+      link: {
+        rotulo: "Requisitos funcionais de busca",
+        url: "https://www.uff.br",
+      },
+    },
+    {
+      texto: "O sistema pode registrar data e local onde o objeto foi encontrado/perdido",
+      link: {
+        rotulo: "Estrutura geográfica dos campi",
+        url: "https://www.uff.br/campi",
+      },
+    },
+    {
+      texto: "A plataforma poderia permitir o cadastro de objetos perdidos e encontrados",
+      link: {
+        rotulo: "Benchmark e arquitetura de formulários",
+        url: "https://www.uff.br",
+      },
+    },
+  ],
+};
+
+export const CSD_COMPARATIVE = {
+  before: CSD_DATA,
+  after: CSD_DATA_AFTER,
+};
+
 export const COMPETITORS: CompetitorGroup[] = [
   {
     group: "Diretos",
@@ -111,8 +186,8 @@ export const COMPETITORS: CompetitorGroup[] = [
   {
     group: "Inspiradores",
     color: "uffa-yellow",
-    bg: "bg-uffa-yellow/15",
-    border: "border-uffa-yellow/40",
+    bg: "bg-uffa-gold/15",
+    border: "border-uffa-gold/40",
     dot: "bg-amber-400",
     items: [
       { name: "Tinder", obs: "Modelo de match bilateral — potencial para conectar perda e achado de forma eficiente" },
@@ -154,8 +229,8 @@ export const EMPATHY_DATA: EmpathyQuadrant[] = [
   {
     quadrant: "FALA",
     icon: "💬",
-    color: "bg-uffa-yellow/20 border-uffa-yellow/40",
-    header: "text-uffa-yellow",
+    color: "bg-uffa-gold/20 border-uffa-gold/40",
+    header: "text-uffa-gold",
     items: [
       "Não conseguem encontrar",
       '"Me dei mal!"',
@@ -171,8 +246,8 @@ export const EMPATHY_DATA: EmpathyQuadrant[] = [
   {
     quadrant: "PENSA",
     icon: "💭",
-    color: "bg-uffa-green/10 border-uffa-green/25",
-    header: "text-uffa-green",
+    color: "bg-uffa-tractorgreen/10 border-uffa-tractorgreen/25",
+    header: "text-uffa-tractorgreen",
     items: [
       "Mais divulgação",
       "Pedir documento e registrar quem pegou",
