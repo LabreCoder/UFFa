@@ -16,8 +16,8 @@ export function Hero() {
         </p>
         */}
 
-        <h1 className="font-display italic text-5xl md:text-8xl text-uffa-gold leading-tight mb-6">
-          UFFa<br />
+        <h1 className="font-display italic text-5xl md:text-8xl text-uffa-navy leading-tight mb-6">
+          Uffa<br />
         </h1>
 
         <h1 className="font-display text-5xl md:text-4xl text-uffa-blue leading-tight mb-6">

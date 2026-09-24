@@ -8,7 +8,7 @@ import { SectionImage } from "../../ui/SectionImage";
 
 function MatrixColumns({ data, badgeLabel }) {
   return (
-    <div className="flex-1">
+    <div className="flex-1 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
       {badgeLabel && (
         <div className="mb-6 flex items-center justify-between border-b border-uffa-navy/30 pb-3">
           <span className="text-sm font-bold uppercase tracking-wider text-uffa-navy">
@@ -187,17 +187,17 @@ export function CsdMatrix() {
 
         {viewMode === "all" && (
           <div className="flex flex-col xl:flex-row gap-8">
-            <div className="flex-1 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
+            <div>
               <MatrixColumns
                 data={CSD_DATA}
                 badgeLabel="Antes da Consultoria"
               />
             </div>
 
-            <div className="flex-1 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
+            <div>
               <MatrixColumns
                 data={CSD_DATA_AFTER}
-                badgeLabel="Depois da Consultoria (Com Links)"
+                badgeLabel="Depois da Consultoria"
               />
             </div>
           </div>
