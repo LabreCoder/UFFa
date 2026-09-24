@@ -65,28 +65,32 @@ export const CSD_DATA: CsdData = {
   certezas: [
     "É uma dor dos alunos da UFF",
     "É necessário um canal de divulgação da nossa solução",
-    "Há muita desinformação sobre como recuperar objetos perdidos",
+    "Há muita desinformação sobre como encontrar objetos perdidos",
     "Há muita desinformação sobre como devolver objetos achados",
-    "O projeto tem como objetivo facilitar a conexão entre quem perdeu e quem encontrou um objeto",
+    "Deve ser um canal simplificado que facilite a conexão de quem perdeu e quem encontrou um objeto",
     "A plataforma pode possuir filtros por campus, categoria e período",
     "O sistema pode registrar data e local onde o objeto foi encontrado/perdido",
-    "A plataforma poderia permitir o cadastro de objetos perdidos e encontrados",
+    "A solução deve permitir o cadastro de objetos perdidos e encontrados",
   ],
   suposicoes: [
     "Muitos objetos perdidos dentro da universidade não são recuperados",
-    "Atualmente, os usuários dependem de grupos de WhatsApp, Instagram ou comunicação informal para procurar objetos",
-    "A falta de uma plataforma centralizada dificulta a localização dos objetos",
-    "Fotos dos objetos ajudariam bastante na identificação",
+    "Atualmente, os usuários dependem de grupos de WhatsApp para anunciar os objetos",
+    "A falta de um sistema centralizado dificulta a localização dos objetos",
+    "Fotos dos objetos ajudariam muito na identificação",
     "Gamificação ou recompensas poderiam incentivar pessoas a devolverem objetos",
+    "As pessoas teriam receio de cadastrar objetos de alto valor por medo de assumir responsabilidade",
+    "A maioria usaria pelo celular",
   ],
   duvidas: [
     "Quem são os concorrentes?",
     "Como garantir a segurança da entrega ser feita ao verdadeiro dono?",
-    "Há alguma barreira legal que impeça os objetos encontrados a serem doados após muito tempo guardado?",
+    "Há alguma barreira legal que impeça os objetos encontrados a serem doados após longo tempo guardado?",
     "A UFF aceitaria disponibilizar um local para armazenar os objetos?",
     "Como atrair as pessoas para essa implementação?",
-    "Como funciona o processo atual na faculdade para quem perde e acha objetos pelo campus?",
+    "Como a UFF lida com essa dor hoje?",
     "Como lidar com objetos de alto valor encontrados?",
+    "Como agir caso duas pessoas diferentes reivindiquem o mesmo objeto?",
+    "Por quanto tempo armazenar o objeto perdido?"
   ],
 };
 
@@ -110,7 +114,7 @@ export const CSD_DATA_AFTER = {
       },
     },
     {
-      texto: "Há muita desinformação sobre como recuperar objetos perdidos",
+      texto: "Há muita desinformação sobre como encontrar objetos perdidos",
       link: {
         rotulo: "Mapeamento dos postos de atendimento",
         url: "https://www.uff.br",
@@ -124,7 +128,7 @@ export const CSD_DATA_AFTER = {
       },
     },
     {
-      texto: "O projeto tem como objetivo facilitar a conexão entre quem perdeu e quem encontrou um objeto",
+      texto: "Deve ser um canal simplificado que facilite a conexão de quem perdeu e quem encontrou um objeto",
       link: {
         rotulo: "Declaração de escopo e proposta de valor",
         url: "https://www.uff.br",
@@ -145,7 +149,7 @@ export const CSD_DATA_AFTER = {
       },
     },
     {
-      texto: "A plataforma poderia permitir o cadastro de objetos perdidos e encontrados",
+      texto: "A solução deve permitir o cadastro de objetos perdidos e encontrados",
       link: {
         rotulo: "Benchmark e arquitetura de formulários",
         url: "https://www.uff.br",
