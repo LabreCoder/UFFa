@@ -18,7 +18,7 @@ export function SectionImage({ image }: { image: string }) {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          opacity: 0.35,
+          opacity: 0.30,
           mixBlendMode: "multiply",
         }}
       >   
