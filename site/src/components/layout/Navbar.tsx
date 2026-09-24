@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
         <button
           onClick={() => scrollTo("#hero")}
-          className="font-display text-lg text-uffa-blue tracking-tight hover:opacity-80 transition-opacity"
+          className="font-display font-bold italic text-2xl text-uffa-gold tracking-tight hover:opacity-80 transition-opacity"
         >
           UFFa
         </button>
