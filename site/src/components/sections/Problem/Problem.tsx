@@ -5,7 +5,7 @@ import { SectionImage } from "../../ui/SectionImage";
 
 export function Problem() {
   return (
-    <section id="problema" className="relative py-24 px-6 overflow-hidden bg-uffa-blue/50">
+    <section id="problema" className="relative py-24 px-6 overflow-hidden bg-uffa-blue/40">
       <SectionImage image="image1" />
       <div className="relative z-10 max-w-5xl mx-auto">
         <SectionHeader

@@ -4,12 +4,13 @@ import { SectionImage } from "../../ui/SectionImage";
 
 export function ResearchInstruments() {
   return (
-    <section className="relative py-24 px-6">
+    <section className="relative py-24 px-6 bg-uffa-coral/30">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           tag="Instrumentos de Pesquisa"
           title="Entrevistas e Questionário"
+          tagColor="text-uffa-blue"
         />
 
         <div className="grid md:grid-cols-2 gap-8">

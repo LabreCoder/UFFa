@@ -8,7 +8,7 @@ import { SectionImage } from "../../ui/SectionImage";
 
 function MatrixColumns({ data, badgeLabel }) {
   return (
-    <div className="flex-1 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
+    <div className="flex-1 p-6 bg-uffa-white/70 border border-uffa-navy/10 rounded-3xl">
       {badgeLabel && (
         <div className="mb-6 flex items-center justify-between border-b border-uffa-navy/30 pb-3">
           <span className="text-sm font-bold uppercase tracking-wider text-uffa-navy">
@@ -120,7 +120,7 @@ export function CsdMatrix() {
   const pdfDownloadUrl = "public/matriz-csd-uffa.pdf";
 
   return (
-    <section id="descobertas" className="relative py-24 px-6 bg-uffa-lightblue">
+    <section id="descobertas" className="relative py-24 px-6 bg-uffa-white/10">
       <SectionImage image="image1" />
       <div
         className={`mx-auto transition-all duration-300 ${
@@ -133,6 +133,7 @@ export function CsdMatrix() {
             title="Certezas, Suposições e Dúvidas"
             description="Mapeamos o que sabemos, o que supomos e o que investigamos antes e depois dos apontamentos da consultoria."
             className="mb-0"
+            tagColor="text-uffa-blue"
           />
 
           {/* Seletor de visualização */}

@@ -2,7 +2,7 @@ import { SectionImage } from "../../ui/SectionImage";
 
 export function ResearchQuestion() {
   return (
-    <section className="relative py-24 px-6">
+    <section className="relative py-24 px-6 bg-uffa-white">
       <SectionImage image="image1" />
       <div className="max-w-4xl mx-auto text-center">
         <span className="text-xs font-medium tracking-widest uppercase text-uffa-blue/70 block mb-10">

@@ -29,26 +29,27 @@ const RESEARCH_STEPS = [
     done: true,
   },
   {
-    label: "Roteiro de Entrevistas & Questionário",
+    label: "Entrevistas & Questionário",
     desc: "Instrumento semiestruturado definido para quem perdeu, encontrou, docentes, técnicos e atendentes, acompanhado de instrumento quantitativo para ampliar a escala da recolha.",
     done: true,
   },
-  {/*
-    label: "Entrevistas em Profundidade",
-    desc: "Realização de conversas qualitativas detalhadas com os intervenientes para aprofundar narrativas, validar hipóteses e mapear a jornada real.",
+  {
+    label: "Criação de Personas",
+    desc: "Desenvolvimento de perfis representativos dos usuários com base nas entrevistas e questionários realizados.",
     done: false,
-  */},
+  },
 ];
 
 export function ResearchTimeline() {
   return (
-    <section id="pesquisa" className="relative py-24 px-6 bg-uffa-blue/50">
+    <section id="pesquisa" className="relative py-24 px-6 bg-uffa-coral/30">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           tag="Nossa Pesquisa"
           title="O que fizemos até aqui"
           className="mb-16"
+          tagColor="text-uffa-blue"
         />
 
         <div className="relative">
@@ -79,12 +80,12 @@ export function ResearchTimeline() {
                   className={`flex-1 rounded-2xl p-6 border transition-all duration-200 ${
                     step.done
                       ? "bg-white border-uffa-navy/8 hover:shadow-sm"
-                      : "bg-uffa-gold/10 border-uffa-gold/40"
+                      : "bg-white/50 border-uffa-gold/80"
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     {!step.done && (
-                      <Badge variant="yellow">Em andamento</Badge>
+                      <Badge variant="red">Em andamento</Badge>
                     )}
                     <h3 className="font-semibold text-uffa-navy">{step.label}</h3>
                   </div>

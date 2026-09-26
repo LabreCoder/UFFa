@@ -9,7 +9,7 @@ export function NextSteps() {
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           tag="Próximos Passos"
-          tagColor="text-uffa-tractorgreen/70"
+          tagColor="text-uffa-blue"
           title={<span className="text-white">O que vem a seguir</span>}
           description="A pesquisa está em andamento. Estes são os passos planejados antes de propor qualquer solução."
         />

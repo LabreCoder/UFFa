@@ -7,7 +7,7 @@ export function Hero() {
   const { scrollTo } = useScrollTo();
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">      
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center bg-uffa-white/70">
       <SectionImage image="image1" />
       <div className="max-w-3xl mx-auto">
         {/*

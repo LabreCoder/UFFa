@@ -4,7 +4,7 @@ import { SectionImage } from "../../ui/SectionImage";
 
 export function Team() {
   return (
-    <section className="relative py-24 px-6">
+    <section className="relative py-24 px-6 bg-uffa-white/10">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader

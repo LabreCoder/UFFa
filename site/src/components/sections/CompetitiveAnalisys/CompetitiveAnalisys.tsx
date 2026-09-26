@@ -6,7 +6,7 @@ import { SectionImage } from "../../ui/SectionImage";
 // Matriz inicial (Antes)
 function CompetitorsBefore({ data, badgeLabel }) {
   return (
-    <div className="flex flex-col gap-6 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
+    <div className="flex flex-col gap-6 p-6 bg-white/70 border border-uffa-navy/10 rounded-3xl">
       {badgeLabel && (
         <div className="mb-2 flex items-center justify-between border-b border-uffa-navy/30 pb-3">
             <span className="text-sm font-bold uppercase tracking-wider text-uffa-navy">
@@ -42,7 +42,7 @@ function CompetitorsBefore({ data, badgeLabel }) {
 // Matriz detalhada (Depois)
 function CompetitorsAfter({ data, badgeLabel }) {
   return (
-    <div className="flex flex-col gap-6 p-6 bg-white/40 border border-uffa-navy/10 rounded-3xl">
+    <div className="flex flex-col gap-6 p-6 bg-white/70 border border-uffa-navy/10 rounded-3xl">
       {badgeLabel && (
         <div className="mb-2 flex items-center justify-between border-b border-uffa-navy/30 pb-3">
             <span className="text-sm font-bold uppercase tracking-wider text-uffa-navy">
@@ -129,7 +129,7 @@ export function CompetitiveAnalysis() {
   const pdfDownloadUrl = "public/Analise_Competitiva.pdf";
 
   return (
-    <section className="relative py-24 px-6 bg-uffa-coral/50">
+    <section className="relative py-24 px-6 bg-uffa-blue/25">
       <SectionImage image="image3" />
       <div
         className={`mx-auto transition-all duration-300 ${
@@ -143,6 +143,7 @@ export function CompetitiveAnalysis() {
             title="O que o mercado já faz"
             description="Estudamos soluções existentes em três grupos para identificar padrões, lacunas, referências de UX e ideias de design."
             className="mb-0"
+            tagColor="text-uffa-gold"
           />
 
           <div className="inline-flex self-start md:self-auto p-1.5 bg-white/70 backdrop-blur-sm border border-uffa-navy/10 rounded-2xl shadow-xs shrink-0">
