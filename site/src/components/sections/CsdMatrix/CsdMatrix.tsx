@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CSD_DATA, CSD_DATA_AFTER } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 // Se colocar o arquivo na pasta src/assets, descomente a linha abaixo:
 // import csdPdf from "../../../assets/matriz-csd-uffa.pdf";
@@ -118,9 +119,10 @@ export function CsdMatrix() {
   const [viewMode, setViewMode] = useState("all"); // 'before' | 'after' | 'all'
 
   const pdfDownloadUrl = "public/matriz-csd-uffa.pdf";
+  //<section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center bg-uffa-white/70"></section>
 
   return (
-    <section id="descobertas" className="relative py-24 px-6 bg-uffa-white/10">
+    <SectionDefault id="descobertas" colorDefault="bg-uffa-white/10">
       <SectionImage image="image1" />
       <div
         className={`mx-auto transition-all duration-300 ${
@@ -234,6 +236,6 @@ export function CsdMatrix() {
           </a>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

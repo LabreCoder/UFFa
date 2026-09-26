@@ -2,6 +2,7 @@ import { useState } from "react";
 import { COMPETITORS, COMPETITORS_AFTER, OPPORTUNITIES } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 // Matriz inicial (Antes)
 function CompetitorsBefore({ data, badgeLabel }) {
@@ -129,7 +130,7 @@ export function CompetitiveAnalysis() {
   const pdfDownloadUrl = "public/Analise_Competitiva.pdf";
 
   return (
-    <section className="relative py-24 px-6 bg-uffa-blue/25">
+    <SectionDefault colorDefault="bg-uffa-blue/25">
       <SectionImage image="image3" />
       <div
         className={`mx-auto transition-all duration-300 ${
@@ -258,6 +259,6 @@ export function CompetitiveAnalysis() {
           </a>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

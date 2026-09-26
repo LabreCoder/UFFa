@@ -1,10 +1,11 @@
 import { NEXT_STEPS } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 export function NextSteps() {
   return (
-    <section id="proximos" className="relative py-24 px-6 bg-uffa-navy">
+    <SectionDefault id="proximos" colorDefault="bg-uffa-navy">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
@@ -35,6 +36,6 @@ export function NextSteps() {
           Sem prazos prometidos · Sem telas de solução ainda · Processo honesto e em andamento
         </p>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

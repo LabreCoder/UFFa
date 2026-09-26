@@ -1,10 +1,11 @@
 import { TEAM_MEMBERS, ADVISOR } from "../../../data/team";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 export function Team() {
   return (
-    <section className="relative py-24 px-6 bg-uffa-white/10">
+    <SectionDefault colorDefault="bg-uffa-white/10">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
@@ -35,6 +36,6 @@ export function Team() {
           <p className="text-sm text-uffa-navy/40 mt-1">{ADVISOR.institution}</p>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

@@ -1,10 +1,11 @@
 import { RESEARCH_PROFILES, QUESTIONNAIRE_TOPICS } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 export function ResearchInstruments() {
   return (
-    <section className="relative py-24 px-6 bg-uffa-coral/30">
+    <SectionDefault colorDefault="bg-uffa-coral/30">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
@@ -62,6 +63,6 @@ export function ResearchInstruments() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

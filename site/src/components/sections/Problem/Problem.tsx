@@ -2,10 +2,11 @@ import { PROBLEM_CHANNELS } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { Card } from "../../ui/Card";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 export function Problem() {
   return (
-    <section id="problema" className="relative py-24 px-6 overflow-hidden bg-uffa-blue/40">
+    <SectionDefault id="problema" colorDefault="bg-uffa-blue/40">
       <SectionImage image="image1" />
       <div className="relative z-10 max-w-5xl mx-auto">
         <SectionHeader
@@ -41,6 +42,6 @@ export function Problem() {
           </p>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

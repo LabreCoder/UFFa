@@ -1,6 +1,7 @@
 import { SectionHeader } from "../../ui/SectionHeader";
 import { Badge } from "../../ui/Badge";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 
 const RESEARCH_STEPS = [
   {
@@ -42,7 +43,7 @@ const RESEARCH_STEPS = [
 
 export function ResearchTimeline() {
   return (
-    <section id="pesquisa" className="relative py-24 px-6 bg-uffa-coral/30">
+    <SectionDefault id="pesquisa" colorDefault="bg-uffa-coral/30">
       <SectionImage image="image1" />
       <div className="max-w-5xl mx-auto">
         <SectionHeader
@@ -96,6 +97,6 @@ export function ResearchTimeline() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

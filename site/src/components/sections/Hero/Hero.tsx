@@ -1,13 +1,13 @@
 import { HeroIllustration } from "./HeroIllustraion";
 import { useScrollTo } from "../../../hooks/useScrollTo";
 import { SectionImage } from "../../ui/SectionImage";
-
+import { SectionDefault } from "../../ui/SectionDefault";
 
 export function Hero() {
   const { scrollTo } = useScrollTo();
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center bg-uffa-white/70">
+    <SectionDefault id="hero" className="min-h-screen flex flex-col items-center justify-center relative py-18 px-6 text-center bg-uffa-white/70">
       <SectionImage image="image1" />
       <div className="max-w-3xl mx-auto">
         {/*
@@ -41,6 +41,6 @@ export function Hero() {
           <span className="block transition-transform duration-200 group-hover:translate-y-0.5">↓</span>
         </button>
       </div>
-    </section>
+    </SectionDefault>
   );
 }

@@ -1,14 +1,16 @@
 import { EMPATHY_DATA } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
+import { SectionDefault } from "../../ui/SectionDefault";
 import mapa from "../../../assets/mapa-empatia-uffa.jpeg";
 
 export function EmpathyMap() {
 
   const pdfDownloadUrl = "/public/mapa-empatia-uffa.pdf";
   const photo = mapa;
+
   return (
-    <section className="relative py-24 px-6 bg-uffa-white/10">
+    <SectionDefault colorDefault="bg-uffa-white/10">
       <SectionImage image="image1" />
       <div className="max-w-4/5 mx-auto">
         <div className="mb-6">
@@ -61,12 +63,12 @@ export function EmpathyMap() {
         </div>
         
         {/*Área da imagem */}
-        <div>
+        <div className="flex flex-col">
           <div className=" mb-6">
-            <span className="text-xl">Abaixo segue nosso <strong>mapa</strong> realizado em sala de aula no dia: <strong>04/08/2026</strong>.</span>
+            <span className="text-xl">Abaixo segue nosso <strong>mapa</strong> realizado em sala de aula no dia: <strong className="text-uffa-blue/90 italic">04/08/2026</strong>.</span>
           </div>
-          <div className="max-w-1xl max-h-1xl">
-            <img src={photo} alt="Mapa de Empatia" className="rounded mb-6" />
+          <div className="w-xl mx-auto flex flex-col items-center justify-center">
+            <img src={photo} alt="Mapa de Empatia" className="border-uffa-gold/80 border rounded mb-6" />
           </div>
         </div>
 
@@ -100,6 +102,6 @@ export function EmpathyMap() {
           </a>
         </div>
       </div>
-    </section>
+    </SectionDefault>
   );
 }
