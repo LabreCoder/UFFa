@@ -11,7 +11,7 @@ interface SectionHeaderProps {
 
 export function SectionHeader({
   tag,
-  tagColor = "text-uffa-blue/70",
+  tagColor = "text-uffa-gold",
   title,
   description,
   className = "mb-14",
@@ -19,14 +19,14 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={`${className} ${align === "center" ? "text-center" : ""}`}>
-      <span className={`text-xs font-medium tracking-widest uppercase ${tagColor}`}>
-        {tag}
+      <span className={`text-2xl font-medium italic tracking-widest uppercase ${tagColor}`}>
+        <strong>{tag}</strong>
       </span>
       <h2 className="font-display text-4xl md:text-5xl text-uffa-navy mt-3 leading-tight">
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 text-uffa-navy/60 leading-relaxed text-sm ${align === "center" ? "mx-auto" : ""} max-w-lg`}>
+        <p className={`mt-4 text-uffa-navy/60 leading-relaxed text-lg ${align === "center" ? "mx-auto" : ""} max-w-lg`}>
           {description}
         </p>
       )}

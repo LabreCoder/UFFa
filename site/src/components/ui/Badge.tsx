@@ -2,7 +2,7 @@ import React from "react";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "yellow" | "blue" | "coral" | "green";
+  variant?: "yellow" | "blue" | "coral" | "green" | "red";
   className?: string;
 }
 
@@ -12,6 +12,7 @@ export function Badge({ children, variant = "yellow", className = "" }: BadgePro
     blue: "bg-uffa-blue text-uffa-blue",
     coral: "bg-uffa-coral text-uffa-coral",
     green: "bg-uffa-tractorgreen text-uffa-tractorgreen",
+    red: "bg-uffa-red text-black",
   };
 
   return (
