@@ -22,7 +22,7 @@ export function SectionHeader({
       <span className={`text-2xl font-medium italic tracking-widest uppercase ${tagColor}`}>
         <strong>{tag}</strong>
       </span>
-      <h2 className="font-display text-4xl md:text-5xl text-uffa-navy mt-3 leading-tight">
+      <h2 className="font-display text-4xl md:text-5xl text-uffa-azulpetroleo-dark mt-3 leading-tight">
         {title}
       </h2>
       {description && (
