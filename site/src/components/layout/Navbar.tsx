@@ -46,7 +46,7 @@ export function Navbar() {
                   className={`text-sm font-medium transition-colors duration-200 ${
                     isActive
                       ? "text-uffa-blue font-semibold"
-                      : "text-black hover:text-white"
+                      : "text-black hover:text-uffa-blue"
                   }`}
                 >
                   {link.label}
