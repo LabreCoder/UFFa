@@ -121,6 +121,8 @@ export function CsdMatrix() {
   const pdfDownloadUrl = "public/matriz-csd-uffa.pdf";
   //<section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center bg-uffa-white/70"></section>
 
+  const color = "bg-uffa-azulpetroleo"
+  
   return (
     <SectionDefault id="descobertas" colorDefault="bg-uffa-white/10">
       <SectionImage image="image1" />
@@ -144,7 +146,7 @@ export function CsdMatrix() {
               onClick={() => setViewMode("before")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "before"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -154,7 +156,7 @@ export function CsdMatrix() {
               onClick={() => setViewMode("after")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "after"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -164,7 +166,7 @@ export function CsdMatrix() {
               onClick={() => setViewMode("all")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "all"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -227,7 +229,7 @@ export function CsdMatrix() {
           <a
             href={pdfDownloadUrl}
             download="Matriz-CSD-UFFa.pdf"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-uffa-navy hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer"
+            className={`inline-flex items-center gap-2 px-5 py-2.5 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

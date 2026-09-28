@@ -8,6 +8,7 @@ export function EmpathyMap() {
 
   const pdfDownloadUrl = "/public/mapa-empatia-uffa.pdf";
   const photo = mapa;
+  const color = "bg-uffa-azulpetroleo";
 
   return (
     <SectionDefault colorDefault="bg-uffa-white/10">
@@ -93,7 +94,7 @@ export function EmpathyMap() {
           <a
             href={pdfDownloadUrl}
             download="Mapa_Empatia_UFFA.pdf"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-uffa-navy hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer"
+            className={`inline-flex items-center gap-2 px-5 py-2.5 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

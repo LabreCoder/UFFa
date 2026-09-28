@@ -129,6 +129,8 @@ export function CompetitiveAnalysis() {
 
   const pdfDownloadUrl = "public/Analise_Competitiva.pdf";
 
+  const color = "bg-uffa-azulpetroleo";
+
   return (
     <SectionDefault colorDefault="bg-uffa-blue/25">
       <SectionImage image="image3" />
@@ -152,7 +154,7 @@ export function CompetitiveAnalysis() {
               onClick={() => setViewMode("before")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "before"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -162,7 +164,7 @@ export function CompetitiveAnalysis() {
               onClick={() => setViewMode("after")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "after"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -172,7 +174,7 @@ export function CompetitiveAnalysis() {
               onClick={() => setViewMode("all")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "all"
-                  ? "bg-uffa-navy text-white shadow-sm"
+                  ? `${color} text-white shadow-sm`
                   : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
               }`}
             >
@@ -215,7 +217,7 @@ export function CompetitiveAnalysis() {
         )}
 
         {/* Oportunidades Identificadas */}
-        <div className="bg-uffa-navy rounded-3xl p-8 md:p-10 mb-8">
+        <div className="bg-uffa-azulpetroleo rounded-3xl p-8 md:p-10 mb-8">
           <p className="text-xs font-semibold tracking-widest uppercase text-uffa-gold mb-6">
             Oportunidades & Diretrizes de Design Consolidadas
           </p>
@@ -250,7 +252,7 @@ export function CompetitiveAnalysis() {
           <a
             href={pdfDownloadUrl}
             download="Analise_Competitiva.pdf"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-uffa-navy hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer"
+            className={`inline-flex items-center gap-2 px-5 py-2.5 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
