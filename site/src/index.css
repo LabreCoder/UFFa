@@ -12,6 +12,11 @@
   --color-uffa-coral: #9A7B5A;
   --color-uffa-lightblue: #E7EFED;
   --color-uffa-red: #E74C3C;
+  --color-uffa-black: #000000;
+  --color-uffa-azulpetroleo: #004B57;
+  --color-uffa-azulpetroleo-dark: #003F5D;
+  
+  --color-uffa-white: #FFFFFF;
 
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;

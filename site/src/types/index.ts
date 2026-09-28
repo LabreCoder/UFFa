@@ -38,6 +38,7 @@ export interface EmpathyQuadrant {
   icon: string;
   color: string;
   header: string;
+  questions: string[];
   items: string[];
 }
 
