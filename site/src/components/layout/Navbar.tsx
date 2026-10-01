@@ -27,23 +27,24 @@ export function Navbar() {
           : "bg-uffa-lightblue border-uffa-navy/10"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
+      {/* max-w-screen-2xl com espaçamentos sincronizados */}
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 xl:px-16 flex items-center justify-between h-16">
         <button
           onClick={() => scrollTo("#hero")}
-          className="font-display font-bold italic text-2xl text-uffa-navy tracking-tight hover:opacity-80 transition-opacity"
+          className="font-display font-bold italic text-3xl text-uffa-navy tracking-tight hover:opacity-80 transition-opacity"
         >
           Uffa
         </button>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
               <li key={link.href}>
                 <button
                   onClick={() => scrollTo(link.href)}
-                  className={`text-sm font-medium transition-colors duration-200 ${
+                  className={`text-base font-medium transition-colors duration-200 ${
                     isActive
                       ? "text-uffa-blue font-semibold"
                       : "text-black hover:text-uffa-blue"
@@ -63,17 +64,17 @@ export function Navbar() {
           aria-label="Menu"
         >
           <span
-            className={`block w-5 h-0.5 bg-uffa-navy transition-transform duration-200 ${
+            className={`block w-6 h-0.5 bg-uffa-navy transition-transform duration-200 ${
               menuOpen ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`block w-5 h-0.5 bg-uffa-navy transition-opacity duration-200 ${
+            className={`block w-6 h-0.5 bg-uffa-navy transition-opacity duration-200 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-5 h-0.5 bg-uffa-navy transition-transform duration-200 ${
+            className={`block w-6 h-0.5 bg-uffa-navy transition-transform duration-200 ${
               menuOpen ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -91,7 +92,7 @@ export function Navbar() {
                 scrollTo(link.href);
                 setMenuOpen(false);
               }}
-              className="text-sm font-medium text-uffa-navy/70 hover:text-uffa-blue text-left transition-colors"
+              className="text-base font-medium text-uffa-navy/70 hover:text-uffa-blue text-left transition-colors"
             >
               {link.label}
             </button>

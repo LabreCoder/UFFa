@@ -7,35 +7,35 @@ export function Hero() {
   const { scrollTo } = useScrollTo();
 
   return (
-    <SectionDefault id="hero" className="min-h-screen flex flex-col items-center justify-center relative py-18 px-6 text-center bg-uffa-white/70">
+    <SectionDefault id="hero" className="min-h-screen flex flex-col items-center justify-center relative py-20 px-6 lg:px-12 text-center bg-uffa-white/70">
       <SectionImage image="image1" />
-      <div className="max-w-3xl mx-auto">
-        {/*
-        <p className="text-xs font-medium tracking-widest uppercase text-uffa-blue/70 mb-8">
-          Projeto de Interação Humano-Computador&nbsp;·&nbsp;Universidade Federal Fluminense
-        </p>
-        */}
+      {/* Contêiner expandido de max-w-3xl para max-w-5xl */}
+      <div className="max-w-5xl mx-auto w-full">
 
-        <h1 className="font-display italic text-5xl md:text-8xl text-uffa-navy leading-tight mb-6">
-          Uffa<br />
+        <h1 className="font-display italic text-6xl md:text-9xl text-uffa-navy leading-none mb-4">
+          Uffa
         </h1>
 
-        <h1 className="font-display text-5xl md:text-4xl text-uffa-blue leading-tight mb-6">
+        {/* Subtítulo proporcionalmente maior */}
+        <h2 className="font-display text-3xl md:text-6xl text-uffa-blue leading-tight mb-8">
           <span className="italic">Achados e Perdidos</span>
-        </h1>
+        </h2>
         
-        <div className="max-w-2xl mx-auto">
-          
-          <p className="text-lg md:text-xl text-uffa-navy/65 max-w-2xl mx-auto leading-relaxed mb-14">
+        {/* Texto descritivo mais largo e legível */}
+        <div className="max-w-3xl mx-auto mb-12">
+          <p className="text-xl md:text-2xl text-uffa-navy/80 leading-relaxed">
             Como podemos tornar mais simples, seguro e confiável encontrar e devolver objetos dentro da UFF?
           </p>
         </div>
 
-        <HeroIllustration />
+        {/* Wrapper para dar mais presença à ilustração */}
+        <div className="w-full max-w-lg md:max-w-xl mx-auto my-6">
+          <HeroIllustration />
+        </div>
 
         <button
           onClick={() => scrollTo("#problema")}
-          className="mt-14 inline-flex items-center gap-2 text-2.5xl font-medium text-uffa-blue hover:text-uffa-navy transition-colors duration-200 group"
+          className="mt-10 inline-flex items-center gap-2 text-xl md:text-2xl font-medium text-uffa-blue hover:text-uffa-navy transition-colors duration-200 group"
         >
           Conheça a pesquisa
           <span className="block transition-transform duration-200 group-hover:translate-y-0.5">↓</span>

@@ -11,7 +11,7 @@ interface SectionDefaultProps {
 
 export function SectionDefault({
   children,
-  className = "relative py-18 px-6",
+  className = "relative py-20 px-6 md:px-12 xl:px-16",
   colorDefault = DEFAULT_COLOR,
   id,
 }: SectionDefaultProps) {

@@ -1,17 +1,20 @@
 export function HeroIllustration() {
   return (
-    <div className="relative flex items-center justify-center w-full max-w-md mx-auto select-none" style={{ height: 180 }}>
+    <div
+      className="relative flex items-center justify-center w-full max-w-2xl mx-auto select-none my-6"
+      style={{ height: 210 }}
+    >
       {/* Lost item — left */}
       <div className="absolute left-0 flex flex-col items-center gap-2">
-        <div className="w-16 h-16 rounded-xl bg-uffa-red/10 border-2 border-uffa-red/40 flex items-center justify-center">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <div className="w-20 h-20 rounded-2xl bg-uffa-red/10 border-2 border-uffa-red/40 flex items-center justify-center shadow-sm">
+          <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
             <rect x="4" y="10" width="24" height="18" rx="3" stroke="var(--color-uffa-gold)" strokeWidth="2"/>
             <path d="M11 10V8a5 5 0 0 1 10 0v2" stroke="var(--color-uffa-gold)" strokeWidth="2" strokeLinecap="round"/>
             <circle cx="16" cy="19" r="2" fill="var(--color-uffa-gold)"/>
             <path d="M16 21v3" stroke="var(--color-uffa-gold)" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </div>
-        <span className="font-bold text-xs font-medium text-uffa-gold tracking-wide uppercase">Perdido</span>
+        <span className="font-bold text-sm text-uffa-gold tracking-wider uppercase">Perdido</span>
       </div>
 
       {/* Dotted connecting line */}
@@ -19,26 +22,26 @@ export function HeroIllustration() {
         <path
           d="M 80 90 C 140 60, 260 120, 320 90"
           stroke="var(--color-uffa-blue)"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeDasharray="6 4"
           fill="none"
           opacity="0.5"
         />
-        <circle cx="200" cy="90" r="10" fill="var(--color-uffa-blue)" opacity="0.12"/>
-        <circle cx="200" cy="90" r="5" fill="var(--color-uffa-blue)" opacity="0.6"/>
-        <path d="M200 95 L200 110" stroke="var(--color-uffa-blue)" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/>
+        <circle cx="200" cy="90" r="12" fill="var(--color-uffa-blue)" opacity="0.12"/>
+        <circle cx="200" cy="90" r="6" fill="var(--color-uffa-blue)" opacity="0.6"/>
+        <path d="M200 95 L200 112" stroke="var(--color-uffa-blue)" strokeWidth="2" strokeLinecap="round" opacity="0.6"/>
       </svg>
 
       {/* Found item — right */}
       <div className="absolute right-0 flex flex-col items-center gap-2">
-        <div className="w-16 h-16 rounded-xl bg-uffa-green/10 border-2 border-uffa-green/60 flex items-center justify-center">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <div className="w-20 h-20 rounded-2xl bg-uffa-green/10 border-2 border-uffa-green/60 flex items-center justify-center shadow-sm">
+          <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
             <circle cx="14" cy="14" r="8" stroke="var(--color-uffa-gold)" strokeWidth="2"/>
             <path d="M20 20 L27 27" stroke="var(--color-uffa-gold)" strokeWidth="2" strokeLinecap="round"/>
             <path d="M10 14 L13 17 L18 11" stroke="var(--color-uffa-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
-        <span className="font-bold text-1xl font-medium text-uffa-gold tracking-wide uppercase">Achado</span>
+        <span className="font-bold text-sm text-uffa-gold tracking-wider uppercase">Achado</span>
       </div>
     </div>
   );

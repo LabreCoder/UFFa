@@ -7,33 +7,34 @@ export function NextSteps() {
   return (
     <SectionDefault id="proximos" colorDefault="bg-uffa-navy">
       <SectionImage image="image1" />
-      <div className="max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Próximos Passos"
           tagColor="text-uffa-blue"
           title={<span className="text-white">O que vem a seguir</span>}
-          description="A pesquisa está em andamento. Estes são os passos planejados antes de propor qualquer solução."
+          description="Com as entrevistas e questionários concluídos, estruturamos os passos seguintes para traduzir as evidências empíricas em requisitos e protótipos de interação."
+          className="mb-14"
         />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {NEXT_STEPS.map((step, i) => (
             <div
               key={i}
-              className="flex items-start gap-6 bg-white/5 hover:bg-white/8 border border-white/10 rounded-2xl px-6 py-5 transition-colors duration-200 group"
+              className="flex items-start gap-6 md:gap-8 bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-7 md:p-8 transition-colors duration-200 group"
             >
-              <span className="font-display text-4xl text-uffa-tractorgreen/40 group-hover:text-uffa-tractorgreen/60 transition-colors shrink-0 leading-none mt-1">
+              <span className="font-display text-4xl md:text-5xl text-uffa-tractorgreen/60 group-hover:text-uffa-tractorgreen transition-colors shrink-0 leading-none mt-1">
                 {step.num}
               </span>
               <div>
-                <h3 className="font-semibold text-white mb-1">{step.label}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{step.desc}</p>
+                <h3 className="font-bold text-white text-lg md:text-xl mb-2">{step.label}</h3>
+                <p className="text-sm md:text-base text-white/70 leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="mt-10 text-sm text-white/40 text-center">
-          Sem prazos prometidos · Sem telas de solução ainda · Processo honesto e em andamento
+        <p className="mt-12 text-sm md:text-base text-white/45 text-center">
+          Pesquisa de campo finalizada · Síntese orientada por dados reais · Ideação e prototipação na próxima fase
         </p>
       </div>
     </SectionDefault>

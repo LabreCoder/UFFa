@@ -18,15 +18,19 @@ export function SectionHeader({
   align = "left",
 }: SectionHeaderProps) {
   return (
-    <div className={`${className} ${align === "center" ? "text-center" : ""}`}>
-      <span className={`text-2xl font-medium italic tracking-widest uppercase ${tagColor}`}>
-        <strong>{tag}</strong>
+    <div className={`${className} ${align === "center" ? "text-center" : "text-left"}`}>
+      <span className={`text-xs md:text-sm font-bold tracking-widest uppercase block ${tagColor}`}>
+        {tag}
       </span>
-      <h2 className="font-display text-4xl md:text-5xl text-uffa-azulpetroleo-dark mt-3 leading-tight">
+      <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-uffa-azulpetroleo-dark mt-3 leading-tight">
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 text-uffa-navy/60 leading-relaxed text-lg ${align === "center" ? "mx-auto" : ""} max-w-lg`}>
+        <p
+          className={`mt-4 text-uffa-navy/75 leading-relaxed text-base md:text-lg max-w-3xl ${
+            align === "center" ? "mx-auto" : ""
+          }`}
+        >
           {description}
         </p>
       )}
