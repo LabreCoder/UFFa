@@ -35,7 +35,7 @@ export function ResearchInstruments() {
                   <h3 className="font-bold text-uffa-navy text-xl md:text-2xl">Roteiro Semiestruturado</h3>
                 </div>
                 <p className="text-base text-uffa-navy/70 leading-relaxed mb-8">
-                  Instrumento qualitativo com 14 perguntas elaborado para explorar o fluxo físico, guarda, verificações de posse e atritos da rotina universitária[cite: 1].
+                  Instrumento qualitativo com 14 perguntas elaborado para explorar o fluxo físico, guarda, verificações de posse e atritos da rotina universitária.
                 </p>
                 <div className="flex flex-col gap-4">
                   {RESEARCH_PROFILES.map((p) => (
@@ -186,19 +186,19 @@ export function ResearchInstruments() {
                   <h4 className="text-xl font-bold text-uffa-navy">Amostragem e Critérios de Escolha</h4>
                 </div>
                 <p className="text-sm text-uffa-navy/75 leading-relaxed mb-6">
-                  Amostra intencional focada nos agentes centrais da custódia física dos objetos (n=5)[cite: 1]. Optou-se por entrevistar os operadores da linha de frente para entender a logística oculta que questionários não captam:
+                  Amostra intencional focada nos agentes centrais da custódia física dos objetos (n=5). Optou-se por entrevistar os operadores da linha de frente para entender a logística oculta que questionários não captam:
                 </p>
                 <div className="space-y-4">
                   <div className="p-4 rounded-2xl bg-uffa-lightblue/40 border border-uffa-blue/10">
                     <p className="text-sm font-bold text-uffa-navy">Secretaria de Unidade (Part. 01, 02 e 03)</p>
                     <p className="text-xs text-uffa-navy/70 mt-1">
-                      Ponto central de guarda prolongada (~6 meses)[cite: 1]. Selecionados para entender o volume real, o método manual de identificação (fitas adesivas)[cite: 1] e a sobrecarga operacional em um setor cuja atribuição formal não é achados e perdidos[cite: 1].
+                      Ponto central de guarda prolongada (~6 meses). Selecionados para entender o volume real, o método manual de identificação (fitas adesivas) e a sobrecarga operacional em um setor cuja atribuição formal não é achados e perdidos.
                     </p>
                   </div>
                   <div className="p-4 rounded-2xl bg-uffa-lightblue/40 border border-uffa-blue/10">
                     <p className="text-sm font-bold text-uffa-navy">Portarias 01 e 02 (Part. 04 e 05)</p>
                     <p className="text-xs text-uffa-navy/70 mt-1">
-                      Pontos de entrada primária imediata[cite: 1]. Selecionados para mapear o primeiro contato após as aulas, o tempo de retenção transitória (1 hora)[cite: 1], a gestão de salas trancadas[cite: 1] e o fluxo de repasse entre prédios[cite: 1].
+                      Pontos de entrada primária imediata. Selecionados para mapear o primeiro contato após as aulas, o tempo de retenção transitória (1 hora), a gestão de salas trancadas e o fluxo de repasse entre prédios.
                     </p>
                   </div>
                 </div>
@@ -218,15 +218,15 @@ export function ResearchInstruments() {
                 <ul className="space-y-3.5 text-xs md:text-sm text-uffa-navy/75 mb-6">
                   <li className="flex items-start gap-2.5">
                     <span className="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Termo de Consentimento (TCLE):</strong> Todos os 5 participantes leram e assinaram o TCLE antes do início das perguntas, sendo esclarecidos sobre os objetivos do projeto acadêmico[cite: 1].</span>
+                    <span><strong>Termo de Consentimento (TCLE):</strong> Todos os 5 participantes leram e assinaram o TCLE antes do início das perguntas, sendo esclarecidos sobre os objetivos do projeto acadêmico.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Garantia de Anonimato:</strong> Identificação codificada (Participante 01 a 05) para resguardar a identidade funcional dos servidores e terceirizados[cite: 1].</span>
+                    <span><strong>Garantia de Anonimato:</strong> Identificação codificada (Participante 01 a 05) para resguardar a identidade funcional dos servidores e terceirizados.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Sem Captação de Áudio:</strong> Para manter o ambiente de trabalho confortável e sem constrangimento, o registro foi feito exclusivamente por notas e citações manuais[cite: 1].</span>
+                    <span><strong>Sem Captação de Áudio:</strong> Para manter o ambiente de trabalho confortável e sem constrangimento, o registro foi feito exclusivamente por notas e citações manuais.</span>
                   </li>
                 </ul>
               </div>
@@ -256,7 +256,7 @@ export function ResearchInstruments() {
             <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Mapeamento de Processo</span>
             <h4 className="text-xl md:text-2xl font-bold text-uffa-navy mt-1 mb-4">A Jornada Real do Objeto Encontrado</h4>
             <p className="text-sm md:text-base text-uffa-navy/75 leading-relaxed mb-8">
-              A partir da triangulação das falas, identificou-se um fluxo linear e desconexo: o objeto troca de mãos sucessivas sem registro integrado ou rastreamento de desfecho[cite: 1].
+              A partir da triangulação das falas, identificou-se um fluxo linear e desconexo: o objeto troca de mãos sucessivas sem registro integrado ou rastreamento de desfecho.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -264,7 +264,7 @@ export function ResearchInstruments() {
                 <div>
                   <span className="text-xs font-bold text-uffa-blue uppercase">1. Origem</span>
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Salas de Aula</h5>
-                  <p className="text-xs text-uffa-navy/70 mt-2">Maioria achada por professores na troca de turno[cite: 1].</p>
+                  <p className="text-xs text-uffa-navy/70 mt-2">Maioria achada por professores na troca de turno.</p>
                 </div>
                 <span className="text-uffa-blue font-bold mt-3 text-lg">↓</span>
               </div>
@@ -273,7 +273,7 @@ export function ResearchInstruments() {
                 <div>
                   <span className="text-xs font-bold text-uffa-blue uppercase">2. Triagem</span>
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Portaria 02</h5>
-                  <p className="text-xs text-uffa-navy/70 mt-2">Sem espaço de guarda. Encaminha para o outro prédio[cite: 1].</p>
+                  <p className="text-xs text-uffa-navy/70 mt-2">Sem espaço de guarda. Encaminha para o outro prédio.</p>
                 </div>
                 <span className="text-uffa-blue font-bold mt-3 text-lg">↓</span>
               </div>
@@ -282,7 +282,7 @@ export function ResearchInstruments() {
                 <div>
                   <span className="text-xs font-bold text-uffa-blue uppercase">3. Espera</span>
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Portaria 01</h5>
-                  <p className="text-xs text-uffa-navy/70 mt-2">Retém o item por ~1h. Se ninguém buscar, sobe à secretaria[cite: 1].</p>
+                  <p className="text-xs text-uffa-navy/70 mt-2">Retém o item por ~1h. Se ninguém buscar, sobe à secretaria.</p>
                 </div>
                 <span className="text-uffa-blue font-bold mt-3 text-lg">↓</span>
               </div>
@@ -291,7 +291,7 @@ export function ResearchInstruments() {
                 <div>
                   <span className="text-xs font-bold text-uffa-blue uppercase">4. Guarda Central</span>
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Secretaria do IC</h5>
-                  <p className="text-xs text-uffa-navy/70 mt-2">Aplica fita com data/local. Fica guardado por até 6 meses[cite: 1].</p>
+                  <p className="text-xs text-uffa-navy/70 mt-2">Aplica fita com data/local. Fica guardado por até 6 meses.</p>
                 </div>
                 <span className="text-uffa-blue font-bold mt-3 text-lg">↓</span>
               </div>
@@ -300,7 +300,7 @@ export function ResearchInstruments() {
                 <div>
                   <span className="text-xs font-bold text-uffa-blue uppercase">5. Destino Final</span>
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Almoxarifado / Doação</h5>
-                  <p className="text-xs text-uffa-navy/70 mt-2">Direção encaminha os itens não reclamados[cite: 1].</p>
+                  <p className="text-xs text-uffa-navy/70 mt-2">Direção encaminha os itens não reclamados.</p>
                 </div>
                 <span className="text-emerald-600 font-bold mt-3 text-base">Conclusão</span>
               </div>
@@ -314,32 +314,32 @@ export function ResearchInstruments() {
               <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Método Qualitativo</span>
               <h4 className="text-xl font-bold text-uffa-navy mt-1 mb-4">Síntese por Análise Temática</h4>
               <p className="text-xs md:text-sm text-uffa-navy/75 leading-relaxed mb-6">
-                Codificação das anotações das 14 perguntas estruturada em quatro pilares determinantes[cite: 1]:
+                Codificação das anotações das 14 perguntas estruturada em quatro pilares determinantes:
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-3 border-uffa-blue pl-4">
                   <h5 className="font-bold text-uffa-navy text-sm">Gargalo Operacional e Carga de Trabalho</h5>
                   <p className="text-xs text-uffa-navy/70 mt-1">
-                    Secretaria e portarias operam no limite de tempo[cite: 1]. Cadernos de registro foram abandonados por falta de praticidade[cite: 1]. A ferramenta não pode exigir digitação burocrática ("Tem que vir para facilitar e não para atrapalhar")[cite: 1].
+                    Secretaria e portarias operam no limite de tempo. Cadernos de registro foram abandonados por falta de praticidade. A ferramenta não pode exigir digitação burocrática ("Tem que vir para facilitar e não para atrapalhar").
                   </p>
                 </div>
                 <div className="border-l-3 border-uffa-blue pl-4">
                   <h5 className="font-bold text-uffa-navy text-sm">Falta de Rastreabilidade e Comunicação</h5>
                   <p className="text-xs text-uffa-navy/70 mt-1">
-                    A Portaria 02 declarou ficar "sem retorno" após repassar itens[cite: 1]. Não há comprovantes formais de entrada e saída, tornando a cadeia suscetível a desencontros[cite: 1].
+                    A Portaria 02 declarou ficar "sem retorno" após repassar itens. Não há comprovantes formais de entrada e saída, tornando a cadeia suscetível a desencontros.
                   </p>
                 </div>
                 <div className="border-l-3 border-uffa-blue pl-4">
                   <h5 className="font-bold text-uffa-navy text-sm">O Ponto Crítico da Troca de Turnos</h5>
                   <p className="text-xs text-uffa-navy/70 mt-1">
-                    A maior incidência de perdas ocorre na transição de aulas e turnos, quando as salas são trancadas pela zeladoria e os alunos ficam sem acesso aos pertences esquecidos[cite: 1].
+                    A maior incidência de perdas ocorre na transição de aulas e turnos, quando as salas são trancadas pela zeladoria e os alunos ficam sem acesso aos pertences esquecidos.
                   </p>
                 </div>
                 <div className="border-l-3 border-uffa-blue pl-4">
                   <h5 className="font-bold text-uffa-navy text-sm">Tensão entre Validação e Exposição de Dados</h5>
                   <p className="text-xs text-uffa-navy/70 mt-1">
-                    Enquanto a portaria defende exigir documentos de quem retira[cite: 1], a secretaria preconiza expor apenas a foto com descrição oculta para evitar reivindicações ilegítimas[cite: 1].
+                    Enquanto a portaria defende exigir documentos de quem retira, a secretaria preconiza expor apenas a foto com descrição oculta para evitar reivindicações ilegítimas.
                   </p>
                 </div>
               </div>
@@ -358,19 +358,19 @@ export function ResearchInstruments() {
                   <div className="bg-uffa-lightblue/35 p-4 rounded-2xl border border-uffa-blue/15">
                     <h5 className="font-bold text-uffa-navy text-sm">1. Cadastro em 2 Cliques + Impressão de Etiqueta</h5>
                     <p className="text-xs text-uffa-navy/70 mt-1">
-                      Fluxo de entrada ultrarrápido: foto automática + geração de identificador com data e local para substituir a fita adesiva manual[cite: 1].
+                      Fluxo de entrada ultrarrápido: foto automática + geração de identificador com data e local para substituir a fita adesiva manual.
                     </p>
                   </div>
                   <div className="bg-uffa-lightblue/35 p-4 rounded-2xl border border-uffa-blue/15">
                     <h5 className="font-bold text-uffa-navy text-sm">2. Termo Digital de Transferência / Recibo</h5>
                     <p className="text-xs text-uffa-navy/70 mt-1">
-                      Registro de custódia simples ("de quem recebeu" para "quem transferiu") para fechar o ciclo de comunicação entre portaria e secretaria[cite: 1].
+                      Registro de custódia simples ("de quem recebeu" para "quem transferiu") para fechar o ciclo de comunicação entre portaria e secretaria.
                     </p>
                   </div>
                   <div className="bg-uffa-lightblue/35 p-4 rounded-2xl border border-uffa-blue/15">
                     <h5 className="font-bold text-uffa-navy text-sm">3. Visualização Pública com Ocultamento Seguro</h5>
                     <p className="text-xs text-uffa-navy/70 mt-1">
-                      Catálogo público que exibe a foto do item, mas oculta descrições minuciosas e marcas singulares, exigindo validação prévia na devolução[cite: 1].
+                      Catálogo público que exibe a foto do item, mas oculta descrições minuciosas e marcas singulares, exigindo validação prévia na devolução.
                     </p>
                   </div>
                 </div>
