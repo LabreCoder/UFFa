@@ -442,7 +442,7 @@ export const QUESTIONNAIRE_TOPICS = [
 
 // PRÓXIMOS PASSOS \\
 export const NEXT_STEPS: NextStepItem[] = [
-  {
+  /*{
     num: "01",
     label: "Realizar entrevistas e piloto",
     desc: "Conduzir as entrevistas semiestruturadas com os quatro perfis definidos e validar o roteiro com um piloto.",
@@ -456,24 +456,24 @@ export const NEXT_STEPS: NextStepItem[] = [
     num: "03",
     label: "Analisar dados coletados",
     desc: "Transcrição, codificação e análise qualitativa e quantitativa dos dados de campo.",
-  },
+  },*/
   {
-    num: "04",
+    num: "01",
     label: "Síntese em Personas e Mapas de Empatia Refinados",
     desc: "Estruturar arquétipos fiéis aos papéis identificados em campo: a Secretaria (sobrecarregada com guarda longa e identificação manual), a Portaria (ponto de trânsito rápido e chave de salas) e os Estudantes/Docentes (vítimas do gargalo da troca de turnos).",
   },
   {
-    num: "05",
+    num: "02",
     label: "Mapeamento do Service Blueprint (On/Off-line)",
     desc: "Desenhar a jornada do serviço conectando o suporte físico nos prédios (cartazes informativos, etiquetas físicas com QR Code) à interface digital, garantindo que o fluxo não dependa de digitação burocrática.",
   },
   {
-    num: "06",
+    num: "03",
     label: "Definição dos Requisitos de Qualidade de Interação",
     desc: "Formalizar os critérios de usabilidade e experiência (eficiência de registro em até 2 cliques, rastreabilidade sem ruído e privacidade de dados sensíveis na consulta pública).",
   },
   {
-    num: "07",
+    num: "04",
     label: "Ideação e Prototipação de Baixa Fidelidade",
     desc: "Explorar alternativas conceituais através de esboços e wireframes navegáveis para validar a triagem de itens e o termo digital de entrega antes de avançar para a alta fidelidade.",
   },
