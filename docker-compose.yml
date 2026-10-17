@@ -5,9 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: uffa_site
     ports:
-      - "3000:3000"
+      - "3300:3300"
     environment:
-      - PORT=3000
+      - PORT=3300
       - FIGMA_DEV_SERVER_HOST=0.0.0.0
       - NODE_ENV=development
     volumes:

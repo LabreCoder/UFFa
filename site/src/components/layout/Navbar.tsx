@@ -1,17 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { NAV_LINKS } from "../../data/navigtation";
 import { useScrollTo } from "../../hooks/useScrollTo";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 import { SectionImage } from "../ui/SectionImage";
+import { NavLink } from "../../types";
 
-export function Navbar() {
+interface NavbarProps {
+  links?: NavLink[];
+  brandTarget?: string;
+  switchLabel?: string;
+  onSwitch?: () => void;
+  onHome?: () => void;
+}
+
+export function Navbar({
+  links = NAV_LINKS,
+  brandTarget = "#hero",
+  switchLabel,
+  onSwitch,
+  onHome,
+}: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollTo } = useScrollTo();
-  const activeSection = useScrollSpy(
-    NAV_LINKS.map((link) => link.href.replace("#", "")),
-    120
-  );
+  const sectionIds = useMemo(() => links.map((link) => link.href.replace("#", "")), [links]);
+  const activeSection = useScrollSpy(sectionIds, 120);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32);
@@ -30,7 +43,7 @@ export function Navbar() {
       {/* max-w-screen-2xl com espaçamentos sincronizados */}
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 xl:px-16 flex items-center justify-between h-16">
         <button
-          onClick={() => scrollTo("#hero")}
+          onClick={() => scrollTo(brandTarget)}
           className="font-display font-bold italic text-3xl text-uffa-navy tracking-tight hover:opacity-80 transition-opacity"
         >
           Uffa
@@ -38,7 +51,7 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-10">
-          {NAV_LINKS.map((link) => {
+          {links.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
               <li key={link.href}>
@@ -55,6 +68,26 @@ export function Navbar() {
               </li>
             );
           })}
+          {onHome && (
+            <li>
+              <button
+                onClick={onHome}
+                className="text-base font-medium text-black hover:text-uffa-blue transition-colors duration-200"
+              >
+                Início das etapas
+              </button>
+            </li>
+          )}
+          {onSwitch && switchLabel && (
+            <li>
+              <button
+                onClick={onSwitch}
+                className="text-sm font-semibold px-4 py-2 rounded-full bg-uffa-azulpetroleo text-white hover:opacity-90 transition-opacity"
+              >
+                {switchLabel}
+              </button>
+            </li>
+          )}
         </ul>
 
         {/* Mobile hamburger */}
@@ -85,7 +118,7 @@ export function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-uffa-bg border-t border-uffa-navy/10 px-6 py-4 flex flex-col gap-4 shadow-lg">
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <button
               key={link.href}
               onClick={() => {
@@ -97,6 +130,22 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
+          {onHome && (
+            <button
+              onClick={onHome}
+              className="text-base font-medium text-uffa-navy/70 hover:text-uffa-blue text-left transition-colors"
+            >
+              Início das etapas
+            </button>
+          )}
+          {onSwitch && switchLabel && (
+            <button
+              onClick={onSwitch}
+              className="text-base font-semibold text-uffa-blue text-left"
+            >
+              {switchLabel}
+            </button>
+          )}
         </div>
       )}
     </nav>

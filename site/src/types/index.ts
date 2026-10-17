@@ -58,3 +58,30 @@ export interface TeamMember {
   name: string;
   role: string;
 }
+export type Stage = "home" | "etapa-1" | "etapa-2";
+
+export interface Persona {
+  id: string;
+  initials: string;
+  name: string;
+  role: string;
+  basis: string;
+  basisTone: "blue" | "gold";
+  quote?: string;
+  goal: string;
+  pains: string[];
+  variation?: string;
+  evidence?: string[];
+}
+
+export interface Scenario {
+  code: string;
+  title: string;
+  persona: string;
+  problem: string;
+}
+
+export interface TaskGroup {
+  persona: string;
+  tasks: string[];
+}
