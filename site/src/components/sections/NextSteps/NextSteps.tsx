@@ -12,7 +12,7 @@ export function NextSteps() {
           tag="Próximos Passos"
           tagColor="text-uffa-blue"
           title={<span className="text-white">O que vem a seguir</span>}
-          description="Com as entrevistas e questionários concluídos, estruturamos os passos seguintes para traduzir as evidências empíricas em requisitos e protótipos de interação."
+          description="Com a pesquisa concluída e as personas, cenários e tarefas definidos, os passos seguintes traduzem as evidências em ideias e protótipos de interação."
           className="mb-14"
         />
 
@@ -34,7 +34,7 @@ export function NextSteps() {
         </div>
 
         <p className="mt-12 text-sm md:text-base text-white/45 text-center">
-          Pesquisa de campo finalizada · Síntese orientada por dados reais · Ideação e prototipação na próxima fase
+          Pesquisa de campo finalizada · Personas, cenários e tarefas prontos · Ideação e prototipação em andamento na Etapa 2
         </p>
       </div>
     </SectionDefault>

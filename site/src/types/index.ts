@@ -81,6 +81,12 @@ export interface Scenario {
   problem: string;
 }
 
+export interface PrototypeImage {
+  title: string;
+  caption: string;
+  src?: string;
+}
+
 export interface TaskGroup {
   persona: string;
   tasks: string[];

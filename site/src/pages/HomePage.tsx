@@ -6,7 +6,7 @@ interface Props {
 
 const OPTIONS: { stage: Stage; label: string; desc: string }[] = [
   { stage: "etapa-1", label: "Etapa 1", desc: "Pesquisa: matriz CSD, análise competitiva, mapa de empatia e instrumentos." },
-  { stage: "etapa-2", label: "Etapa 2", desc: "Personas, cenários-problema e tarefas." },
+  { stage: "etapa-2", label: "Etapa 2", desc: "Personas, cenários-problema, tarefas, ideação (Crazy 4), protótipo em papel e protótipo digital." },
 ];
 
 export function HomePage({ navigate }: Props) {

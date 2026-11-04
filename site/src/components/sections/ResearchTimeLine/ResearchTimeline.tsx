@@ -40,13 +40,18 @@ const RESEARCH_STEPS = [
     done: true,
   },
   {
-    label: "Modelagem de Personas e Jornadas",
-    desc: "Construção de arquétipos representativos dos papéis identificados (Secretaria, Portaria e Aluno) a partir das evidências de campo.",
+    label: "Personas, Cenários e Tarefas",
+    desc: "Construção de três personas (Atendente da Secretaria, Porteiro e Aluno), seis cenários-problema e os grupos de tarefas que o sistema deve suportar, a partir das evidências de campo (disponível na Etapa 2).",
+    done: true,
+  },
+  {
+    label: "Ideação (Crazy 4) e Prototipação em Papel",
+    desc: "Geração de alternativas de solução com a técnica Crazy 4 e construção do protótipo de baixa fidelidade em papel, guiados pelos requisitos levantados (cadastro rápido, termos e visualização segura).",
     done: false,
   },
   {
-    label: "Ideação e Prototipação da Solução",
-    desc: "Desenvolvimento de wireframes e protótipos de interação guiados pelos requisitos levantados (cadastro rápido, termos e visualização segura).",
+    label: "Prototipação Digital (Figma)",
+    desc: "Evolução do protótipo em papel para um protótipo digital navegável no Figma, com as telas principais do fluxo de cadastro, busca e retirada.",
     done: false,
   },
 ];

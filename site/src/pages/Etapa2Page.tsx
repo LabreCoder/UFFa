@@ -3,6 +3,8 @@ import { Footer } from "../components/layout/Footer";
 import { Personas } from "../components/sections/Personas/Personas";
 import { Scenarios } from "../components/sections/Scenarios/Scenarios";
 import { Tasks } from "../components/sections/Tasks/Tasks";
+import { Ideation } from "../components/sections/Ideation/Ideation";
+import { DigitalPrototype } from "../components/sections/DigitalPrototype/DigitalPrototype";
 import { ETAPA2_NAV_LINKS } from "../data/etapa2";
 import { Stage } from "../types";
 
@@ -24,6 +26,8 @@ export function Etapa2Page({ navigate }: Props) {
         <Personas />
         <Scenarios />
         <Tasks />
+        <Ideation />
+        <DigitalPrototype />
       </main>
       <Footer />
     </>

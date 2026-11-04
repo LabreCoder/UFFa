@@ -459,22 +459,17 @@ export const NEXT_STEPS: NextStepItem[] = [
   },*/
   {
     num: "01",
-    label: "Síntese em Personas e Mapas de Empatia Refinados",
-    desc: "Estruturar arquétipos fiéis aos papéis identificados em campo: a Secretaria (sobrecarregada com guarda longa e identificação manual), a Portaria (ponto de trânsito rápido e chave de salas) e os Estudantes/Docentes (vítimas do gargalo da troca de turnos).",
+    label: "Ideação com Crazy 4",
+    desc: "Gerar alternativas de solução para o registro, a custódia e a retirada de objetos, partindo das personas, cenários e tarefas já definidos.",
   },
   {
     num: "02",
-    label: "Mapeamento do Service Blueprint (On/Off-line)",
-    desc: "Desenhar a jornada do serviço conectando o suporte físico nos prédios (cartazes informativos, etiquetas físicas com QR Code) à interface digital, garantindo que o fluxo não dependa de digitação burocrática.",
+    label: "Prototipação em Papel",
+    desc: "Transformar as ideias escolhidas em esboços de baixa fidelidade para testar a triagem de itens e o termo de entrega antes de avançar para a versão digital.",
   },
   {
     num: "03",
-    label: "Definição dos Requisitos de Qualidade de Interação",
-    desc: "Formalizar os critérios de usabilidade e experiência (eficiência de registro em até 2 cliques, rastreabilidade sem ruído e privacidade de dados sensíveis na consulta pública).",
-  },
-  {
-    num: "04",
-    label: "Ideação e Prototipação de Baixa Fidelidade",
-    desc: "Explorar alternativas conceituais através de esboços e wireframes navegáveis para validar a triagem de itens e o termo digital de entrega antes de avançar para a alta fidelidade.",
+    label: "Prototipação Digital",
+    desc: "Construir no Figma o protótipo navegável com as telas principais do fluxo, a partir dos aprendizados do protótipo em papel.",
   },
 ];

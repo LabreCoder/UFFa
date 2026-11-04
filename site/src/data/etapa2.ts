@@ -1,9 +1,21 @@
-import { NavLink, Persona, Scenario, TaskGroup } from "../types";
+import { NavLink, Persona, PrototypeImage, Scenario, TaskGroup } from "../types";
 
 export const ETAPA2_NAV_LINKS: NavLink[] = [
   { label: "Personas", href: "#personas" },
   { label: "Cenários", href: "#cenarios" },
   { label: "Tarefas", href: "#tarefas" },
+  { label: "Ideação", href: "#ideacao" },
+  { label: "Protótipo Digital", href: "#prototipo-digital" },
+];
+
+// Link do protótipo no Figma. Preencher quando disponível.
+export const FIGMA_PROTOTYPE_URL = "";
+
+// Três imagens principais do protótipo. Preencher `src` com a imagem importada.
+export const PROTOTYPE_IMAGES: PrototypeImage[] = [
+  { title: "Imagem 1", caption: "Tela principal do protótipo" },
+  { title: "Imagem 2", caption: "Segunda tela principal do protótipo" },
+  { title: "Imagem 3", caption: "Terceira tela principal do protótipo" },
 ];
 
 export const PERSONAS: Persona[] = [
