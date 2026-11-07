@@ -5,12 +5,12 @@ import { Card } from "../../ui/Card";
 
 export function Scenarios() {
   return (
-    <SectionDefault id="cenarios" colorDefault="bg-uffa-lightblue/50">
+    <SectionDefault id="cenarios" className="relative pt-32 pb-20 px-6 md:px-12 xl:px-16">
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Cenários-problema"
           title="Onde o processo atual falha"
-          description="Situações reais observadas nas entrevistas e no questionário, ligadas à persona que as vive."
+          description="Situações reais observadas nas entrevistas e no questionário. São elas que explicam por que criamos as personas e as tarefas que vêm a seguir."
           tagColor="text-uffa-blue"
         />
 

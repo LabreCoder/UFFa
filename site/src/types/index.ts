@@ -63,10 +63,14 @@ export type Stage = "home" | "etapa-1" | "etapa-2";
 export interface Persona {
   id: string;
   initials: string;
+  givenName: string;
+  age: number;
+  bio: string;
   name: string;
   role: string;
   basis: string;
   basisTone: "blue" | "gold";
+  scenarios: string[];
   quote?: string;
   goal: string;
   pains: string[];
@@ -87,7 +91,46 @@ export interface PrototypeImage {
   src?: string;
 }
 
+export interface PrototypeView {
+  id: string;
+  title: string;
+  description: string;
+  images: PrototypeImage[];
+}
+
 export interface TaskGroup {
   persona: string;
   tasks: string[];
+}
+
+export interface CrazyFollowed {
+  title: string;
+  how: string;
+  stage1?: {
+    outcome: "realidade" | "expectativa";
+    source: string;
+    note: string;
+  };
+}
+
+export interface CrazyDiscarded {
+  title: string;
+  reason: string;
+}
+
+export interface Technique {
+  id: string;
+  label: string;
+  question: string;
+  answer: string;
+  evidence: string[];
+}
+
+export interface AiUsageItem {
+  num: string;
+  title: string;
+  summary: string;
+  tool: string;
+  stage: "Etapa 1" | "Etapa 2";
+  prompt: string;
 }

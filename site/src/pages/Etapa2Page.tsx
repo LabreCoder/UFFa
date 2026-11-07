@@ -5,6 +5,8 @@ import { Scenarios } from "../components/sections/Scenarios/Scenarios";
 import { Tasks } from "../components/sections/Tasks/Tasks";
 import { Ideation } from "../components/sections/Ideation/Ideation";
 import { DigitalPrototype } from "../components/sections/DigitalPrototype/DigitalPrototype";
+import { AiUsage } from "../components/sections/AiUsage/AiUsage";
+import { Team } from "../components/sections/Team/Team";
 import { ETAPA2_NAV_LINKS } from "../data/etapa2";
 import { Stage } from "../types";
 
@@ -17,17 +19,19 @@ export function Etapa2Page({ navigate }: Props) {
     <>
       <Navbar
         links={ETAPA2_NAV_LINKS}
-        brandTarget="#personas"
+        brandTarget="#cenarios"
         switchLabel="Ver Etapa 1"
         onSwitch={() => navigate("etapa-1")}
         onHome={() => navigate("home")}
       />
       <main>
-        <Personas />
         <Scenarios />
+        <Personas />
         <Tasks />
         <Ideation />
         <DigitalPrototype />
+        <AiUsage />
+        <Team />
       </main>
       <Footer />
     </>
