@@ -22,12 +22,12 @@ Aplicar os conceitos e técnicas de IHC apresentados em sala de aula por meio da
 
 O portfólio busca documentar:
 
-* 📖 Conceitos e técnicas apresentados na disciplina;
-* 🔎 Pesquisas e descobertas realizadas pela equipe;
-* 🧠 Decisões tomadas durante o desenvolvimento;
-* 🎨 Processo de construção da interface;
-* 👥 Atividades e avaliações realizadas;
-* 📈 Evolução da proposta ao longo da disciplina.
+* [X] 📖 Conceitos e técnicas apresentados na disciplina;
+* [X] 🔎 Pesquisas e descobertas realizadas pela equipe;
+* [X] 🧠 Decisões tomadas durante o desenvolvimento;
+* [X] 🎨 Processo de construção da interface;
+* [X] 👥 Atividades e avaliações realizadas;
+* [X] 📈 Evolução da proposta ao longo da disciplina.
 
 ## 🔮 Visão futura
 
@@ -42,10 +42,14 @@ A ideia é que o portfólio represente o **primeiro capítulo da história do UF
 ```text
 UFFa/
 ├── site/                     # Aplicação web do portfólio acadêmico
-│   ├── .figma/               # Configurações e manifesto do Figma Make
-│   │   └── make/
-│   │       └── site.json
+│   ├── public/               # Arquivos estáticos e PDFs do projeto
 │   ├── src/                  # Código-fonte da aplicação (React + TypeScript)
+│   │   ├── assets/           # Imagens e recursos visuais
+│   │   ├── components/       # Componentes reutilizáveis da interface
+│   │   ├── data/             # Dados estruturados do portfólio
+│   │   ├── hooks/            # Hooks customizados
+│   │   ├── pages/            # Páginas da aplicação
+│   │   ├── types/            # Definições de tipos TypeScript
 │   │   ├── App.tsx
 │   │   ├── index.css
 │   │   ├── main.tsx
@@ -55,9 +59,6 @@ UFFa/
 │   ├── package.json          # Dependências e scripts do projeto
 │   ├── tsconfig.json         # Configurações do TypeScript
 │   └── vite.config.ts        # Configuração do Vite e Tailwind CSS
-│
-├── docs/                     # Documentação e materiais do projeto
-│   └── IHC/                  # Atividades e artefatos de IHC
 │
 ├── docker-compose.yml        # Orquestração do ambiente de desenvolvimento Docker
 ├── LICENSE                   # Licença do projeto
@@ -86,7 +87,7 @@ docker compose up --build
 ### 3º Passo - Acessar página na web
 
 ```bash
-http://localhost:3000/
+http://localhost:3300/
 ```
 
 Após a inicialização, o endereço para acesso ao portfólio será informado conforme a configuração do projeto.
@@ -97,11 +98,11 @@ Após a inicialização, o endereço para acesso ao portfólio será informado c
 
 * [X] Definição do tema
 * [X] Definição do conceito UFFa
-* [ ] Desenvolvimento do portfólio
-* [ ] Aplicação das técnicas de IHC
-* [ ] Documentação das atividades
-* [ ] Avaliação da interface
-* [ ] Finalização do trabalho
+* [X] Desenvolvimento do portfólio
+* [X] Aplicação das técnicas de IHC
+* [X] Documentação das atividades
+* [X] Avaliação da interface
+* [X] Finalização do trabalho
 
 ### Futuro
 
