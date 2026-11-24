@@ -27,12 +27,13 @@ body,
 #root {
   min-height: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
   background-color: var(--color-uffa-bg);
   color: var(--color-uffa-navy);
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: var(--font-body);
 }
 
 * {
@@ -40,4 +41,12 @@ body {
 }
 *::-webkit-scrollbar {
   display: none;
+}
+
+@utility btn-primario {
+  @apply inline-flex items-center gap-2 rounded-full bg-uffa-azulpetroleo px-6 py-3 text-sm font-semibold text-white transition-colors cursor-pointer hover:bg-uffa-azulpetroleo-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uffa-azulpetroleo;
+}
+
+@utility btn-secundario {
+  @apply inline-flex items-center gap-2 rounded-full border-2 border-uffa-azulpetroleo px-6 py-3 text-sm font-semibold text-uffa-azulpetroleo transition-colors cursor-pointer hover:bg-uffa-azulpetroleo/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uffa-azulpetroleo;
 }

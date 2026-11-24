@@ -1,10 +1,8 @@
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 
 export function ResearchQuestion() {
   return (
-    <SectionDefault colorDefault="bg-uffa-white">
-      <SectionImage image="image1" />
+    <SectionDefault>
       <div className="max-w-4xl mx-auto text-center">
         <span className="text-xl italic font-medium tracking-widest uppercase text-uffa-blue/70 block mb-10">
           Pergunta de Pesquisa

@@ -1,6 +1,5 @@
 import { EMPATHY_DATA } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 import mapa from "../../../assets/mapa-empatia-uffa.jpeg";
 import mapaEmpatia from "../../../../public/mapa-empatia-uffa.pdf";
@@ -8,11 +7,9 @@ import mapaEmpatia from "../../../../public/mapa-empatia-uffa.pdf";
 export function EmpathyMap() {
   const pdfDownloadUrl = mapaEmpatia;
   const photo = mapa;
-  const color = "bg-uffa-azulpetroleo";
 
   return (
     <SectionDefault colorDefault="bg-uffa-white/10">
-      <SectionImage image="image1" />
       
       {/* Contêiner mestre com alinhamento e largura padronizados */}
       <div className="relative z-10 max-w-screen-2xl mx-auto">
@@ -104,7 +101,7 @@ export function EmpathyMap() {
           <a
             href={pdfDownloadUrl}
             download="Mapa_Empatia_UFFA.pdf"
-            className={`inline-flex items-center gap-2.5 px-6 py-3 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
+            className="btn-primario shrink-0"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

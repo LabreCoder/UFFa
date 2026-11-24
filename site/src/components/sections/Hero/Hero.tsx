@@ -2,18 +2,19 @@ import { HeroIllustration } from "./HeroIllustraion";
 import { useScrollTo } from "../../../hooks/useScrollTo";
 import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
+import { Logo } from "../../ui/Logo";
 
 export function Hero() {
   const { scrollTo } = useScrollTo();
 
   return (
-    <SectionDefault id="hero" className="min-h-screen flex flex-col items-center justify-center relative py-20 px-6 lg:px-12 text-center bg-uffa-white/70">
+    <SectionDefault id="hero" className="min-h-screen flex flex-col items-center justify-center relative py-20 px-6 lg:px-12 text-center" colorDefault="bg-uffa-white/70">
       <SectionImage image="image1" />
       {/* Contêiner expandido de max-w-3xl para max-w-5xl */}
-      <div className="max-w-5xl mx-auto w-full">
+      <div className="relative z-10 max-w-5xl mx-auto w-full">
 
-        <h1 className="font-display italic text-6xl md:text-9xl text-uffa-navy leading-none mb-4">
-          Uffa
+        <h1 className="text-6xl md:text-9xl leading-none mb-4">
+          <Logo />
         </h1>
 
         {/* Subtítulo proporcionalmente maior */}

@@ -3,9 +3,9 @@ import { SectionHeader } from "../../ui/SectionHeader";
 import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 
-export function Team() {
+export function Team({ colorDefault = "bg-uffa-white/10" }: { colorDefault?: string }) {
   return (
-    <SectionDefault colorDefault="bg-uffa-white/10">
+    <SectionDefault colorDefault={colorDefault}>
       <SectionImage image="image1" />
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
@@ -20,7 +20,7 @@ export function Team() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mb-16">
           {TEAM_MEMBERS.map((member, i) => (
             <div key={i} className="text-center group flex flex-col items-center">
-              <div className="w-20 h-20 rounded-2xl bg-uffa-lightblue border border-uffa-blue/20 flex items-center justify-center mb-4 group-hover:bg-uffa-blue/15 transition-all shadow-xs">
+              <div className="w-20 h-20 rounded-2xl bg-white border border-uffa-blue/20 flex items-center justify-center mb-4 group-hover:bg-uffa-blue/15 transition-all shadow-xs">
                 <span className="font-display text-2xl font-bold text-uffa-blue">
                   {i + 1}
                 </span>

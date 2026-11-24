@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { COMPETITORS, COMPETITORS_AFTER, OPPORTUNITIES } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 import analiseCompetitiva from "../../../../public/Analise_Competitiva.pdf";
 
@@ -68,7 +67,7 @@ function CompetitorsAfter({ data, badgeLabel }) {
                 className={`${group.bg} border ${group.border} rounded-2xl p-6 flex flex-col justify-between hover:shadow-sm transition-all`}
               >
                 <div>
-                  <h4 className="font-bold text-uffa-navy text-base md:text-lg mb-2">{item.name}</h4>
+                  <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mb-2">{item.name}</h4>
                   <p className="text-xs md:text-sm text-uffa-navy/75 mb-4 leading-relaxed">{item.desc}</p>
 
                   <div className="space-y-2.5 text-xs md:text-sm">
@@ -132,8 +131,7 @@ export function CompetitiveAnalysis() {
   const color = "bg-uffa-azulpetroleo";
 
   return (
-    <SectionDefault colorDefault="bg-uffa-blue/25">
-      <SectionImage image="image3" />
+    <SectionDefault colorDefault="bg-uffa-lightblue">
       
       {/* Contêiner mestre com alinhamento rigoroso */}
       <div className="relative z-10 max-w-screen-2xl mx-auto">
@@ -144,7 +142,6 @@ export function CompetitiveAnalysis() {
             title="O que o mercado já faz"
             description="Estudamos soluções existentes em três grupos para identificar padrões, lacunas, referências de UX e ideias de design."
             className="mb-0"
-            tagColor="text-uffa-gold"
           />
 
           <div className="inline-flex self-start md:self-auto p-1.5 bg-white/70 backdrop-blur-sm border border-uffa-navy/10 rounded-2xl shadow-xs shrink-0">
@@ -153,7 +150,7 @@ export function CompetitiveAnalysis() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "before"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Antes
@@ -163,7 +160,7 @@ export function CompetitiveAnalysis() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "after"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Depois
@@ -173,7 +170,7 @@ export function CompetitiveAnalysis() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "all"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Comparativo
@@ -254,7 +251,7 @@ export function CompetitiveAnalysis() {
           <a
             href={pdfDownloadUrl}
             download="Analise_Competitiva.pdf"
-            className={`inline-flex items-center gap-2.5 px-6 py-3 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
+            className="btn-primario shrink-0"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

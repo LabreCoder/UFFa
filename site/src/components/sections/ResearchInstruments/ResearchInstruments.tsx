@@ -5,10 +5,9 @@ import tclePdf from "../../../../public/TCLE-UFFA.pdf";
 
 export function ResearchInstruments() {
   const pdfDownloadUrl = tclePdf;
-  const color = "bg-uffa-azulpetroleo";
-  
+
   return (
-    <SectionDefault colorDefault="bg-uffa-coral/20">
+    <SectionDefault colorDefault="bg-uffa-lightblue">
       {/* Contêiner mestre alinhado com todas as outras seções */}
       <div className="relative z-10 max-w-screen-2xl mx-auto flex flex-col gap-20">
         
@@ -32,7 +31,7 @@ export function ResearchInstruments() {
                   <div className="w-12 h-12 rounded-2xl bg-uffa-blue/10 flex items-center justify-center text-2xl shrink-0">
                     🎙️
                   </div>
-                  <h3 className="font-bold text-uffa-navy text-xl md:text-2xl">Roteiro Semiestruturado</h3>
+                  <h3 className="font-display text-2xl text-uffa-azulpetroleo-dark">Roteiro Semiestruturado</h3>
                 </div>
                 <p className="text-base text-uffa-navy/70 leading-relaxed mb-8">
                   Instrumento qualitativo com 14 perguntas elaborado para explorar o fluxo físico, guarda, verificações de posse e atritos da rotina universitária.
@@ -58,7 +57,7 @@ export function ResearchInstruments() {
                   <div className="w-12 h-12 rounded-2xl bg-uffa-blue/10 flex items-center justify-center text-2xl shrink-0">
                     📊
                   </div>
-                  <h3 className="font-bold text-uffa-navy text-xl md:text-2xl">Questionário Quantitativo</h3>
+                  <h3 className="font-display text-2xl text-uffa-azulpetroleo-dark">Questionário Quantitativo</h3>
                 </div>
                 <p className="text-base text-uffa-navy/70 leading-relaxed mb-8">
                   Mapeamento com a comunidade acadêmica da UFF (n=23 respostas coletadas com consentimento).
@@ -80,7 +79,7 @@ export function ResearchInstruments() {
                   href="https://forms.gle/NQx53u5XJ15qaq5J8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-uffa-azulpetroleo text-white text-xs md:text-sm font-semibold px-5 py-3 rounded-xl hover:opacity-90 transition-opacity shadow-xs cursor-pointer"
+                  className="btn-primario"
                 >
                   Ver Questionário (Google Forms) ↗
                 </a>
@@ -106,7 +105,7 @@ export function ResearchInstruments() {
             <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-7 md:p-8 flex flex-col justify-between shadow-xs">
               <div>
                 <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Gargalo Crítico</span>
-                <h4 className="text-xl md:text-2xl font-bold text-uffa-navy mt-2 mb-3">70% não sabem onde entregar</h4>
+                <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-2 mb-3">70% não sabem onde entregar</h4>
                 <p className="text-sm md:text-base text-uffa-navy/75 leading-relaxed mb-6">
                   16 de 23 pessoas não sabem ou têm dúvidas sobre o local correto. A portaria é usada como improviso: 7 de 8 que entregaram lá disseram não ter certeza se era o canal oficial.
                 </p>
@@ -116,7 +115,7 @@ export function ResearchInstruments() {
                   <span>Pedem clareza de onde ir</span>
                   <span className="font-bold">91%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                <div className="w-full bg-uffa-navy/10 h-2.5 rounded-full overflow-hidden">
                   <div className="bg-uffa-blue h-full w-[91%] rounded-full"></div>
                 </div>
               </div>
@@ -126,7 +125,7 @@ export function ResearchInstruments() {
             <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-7 md:p-8 flex flex-col justify-between shadow-xs">
               <div>
                 <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Efetividade</span>
-                <h4 className="text-xl md:text-2xl font-bold text-uffa-navy mt-2 mb-3">Perda frequente, resgate raro</h4>
+                <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-2 mb-3">Perda frequente, resgate raro</h4>
                 <p className="text-sm md:text-base text-uffa-navy/75 leading-relaxed mb-6">
                   Das 11 pessoas que perderam itens no último ano, só 4 recuperaram (todas garrafas, refazendo o caminho a pé). Documentos e cartões tiveram 0% de recuperação.
                 </p>
@@ -136,8 +135,8 @@ export function ResearchInstruments() {
                   <span>Taxa de recuperação observada</span>
                   <span className="font-bold">36%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                  <div className="bg-rose-500 h-full w-[36%] rounded-full"></div>
+                <div className="w-full bg-uffa-navy/10 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-uffa-red h-full w-[36%] rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -146,7 +145,7 @@ export function ResearchInstruments() {
             <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-7 md:p-8 flex flex-col justify-between shadow-xs">
               <div>
                 <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Privacidade e Posse</span>
-                <h4 className="text-xl md:text-2xl font-bold text-uffa-navy mt-2 mb-3">Verificação vs Exposição</h4>
+                <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-2 mb-3">Verificação vs Exposição</h4>
                 <p className="text-sm md:text-base text-uffa-navy/75 leading-relaxed mb-6">
                   88% exigem checagem de dados que só o dono sabe antes de entregar. A solução precisa exibir fotos sem revelar características que validam a propriedade.
                 </p>
@@ -156,8 +155,8 @@ export function ResearchInstruments() {
                   <span>Prioridade à devolução segura</span>
                   <span className="font-bold">87%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                  <div className="bg-emerald-600 h-full w-[87%] rounded-full"></div>
+                <div className="w-full bg-uffa-navy/10 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-uffa-blue h-full w-[87%] rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -183,7 +182,7 @@ export function ResearchInstruments() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-2xl">👥</span>
-                  <h4 className="text-xl font-bold text-uffa-navy">Amostragem e Critérios de Escolha</h4>
+                  <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark">Amostragem e Critérios de Escolha</h4>
                 </div>
                 <p className="text-sm text-uffa-navy/75 leading-relaxed mb-6">
                   Amostra intencional focada nos agentes centrais da custódia física dos objetos (n=5). Optou-se por entrevistar os operadores da linha de frente para entender a logística oculta que questionários não captam:
@@ -210,22 +209,22 @@ export function ResearchInstruments() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-2xl">⚖️</span>
-                  <h4 className="text-xl font-bold text-uffa-navy">Procedimentos Éticos e TCLE</h4>
+                  <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark">Procedimentos Éticos e TCLE</h4>
                 </div>
                 <p className="text-sm text-uffa-navy/75 leading-relaxed mb-6">
                   A pesquisa seguiu rigorosamente os preceitos éticos para pesquisa com seres humanos, assegurando transparência e proteção integral aos voluntários:
                 </p>
                 <ul className="space-y-3.5 text-xs md:text-sm text-uffa-navy/75 mb-6">
                   <li className="flex items-start gap-2.5">
-                    <span className="text-emerald-600 font-bold">✓</span>
+                    <span className="text-uffa-blue font-bold">✓</span>
                     <span><strong>Termo de Consentimento (TCLE):</strong> Todos os 5 participantes leram e assinaram o TCLE antes do início das perguntas, sendo esclarecidos sobre os objetivos do projeto acadêmico.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="text-emerald-600 font-bold">✓</span>
+                    <span className="text-uffa-blue font-bold">✓</span>
                     <span><strong>Garantia de Anonimato:</strong> Identificação codificada (Participante 01 a 05) para resguardar a identidade funcional dos servidores e terceirizados.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="text-emerald-600 font-bold">✓</span>
+                    <span className="text-uffa-blue font-bold">✓</span>
                     <span><strong>Sem Captação de Áudio:</strong> Para manter o ambiente de trabalho confortável e sem constrangimento, o registro foi feito exclusivamente por notas e citações manuais.</span>
                   </li>
                 </ul>
@@ -240,7 +239,7 @@ export function ResearchInstruments() {
                 <a
                   href={pdfDownloadUrl}
                   download="TCLE-UFFA.pdf"
-                  className={`inline-flex items-center gap-2.5 px-6 py-3 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
+                  className="btn-primario shrink-0"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -254,7 +253,7 @@ export function ResearchInstruments() {
           {/* 2. Mapeamento do Fluxo Físico do Objeto */}
           <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-8 md:p-10 shadow-xs mb-10">
             <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Mapeamento de Processo</span>
-            <h4 className="text-xl md:text-2xl font-bold text-uffa-navy mt-1 mb-4">A Jornada Real do Objeto Encontrado</h4>
+            <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-1 mb-4">A Jornada Real do Objeto Encontrado</h4>
             <p className="text-sm md:text-base text-uffa-navy/75 leading-relaxed mb-8">
               A partir da triangulação das falas, identificou-se um fluxo linear e desconexo: o objeto troca de mãos sucessivas sem registro integrado ou rastreamento de desfecho.
             </p>
@@ -302,7 +301,7 @@ export function ResearchInstruments() {
                   <h5 className="font-bold text-uffa-navy text-base mt-1">Almoxarifado / Doação</h5>
                   <p className="text-xs text-uffa-navy/70 mt-2">Direção encaminha os itens não reclamados.</p>
                 </div>
-                <span className="text-emerald-600 font-bold mt-3 text-base">Conclusão</span>
+                <span className="text-uffa-blue font-bold mt-3 text-base">Conclusão</span>
               </div>
             </div>
           </div>
@@ -312,7 +311,7 @@ export function ResearchInstruments() {
             {/* Eixos da Análise Temática */}
             <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-8 shadow-xs">
               <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Método Qualitativo</span>
-              <h4 className="text-xl font-bold text-uffa-navy mt-1 mb-4">Síntese por Análise Temática</h4>
+              <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-1 mb-4">Síntese por Análise Temática</h4>
               <p className="text-xs md:text-sm text-uffa-navy/75 leading-relaxed mb-6">
                 Codificação das anotações das 14 perguntas estruturada em quatro pilares determinantes:
               </p>
@@ -349,7 +348,7 @@ export function ResearchInstruments() {
             <div className="bg-white/90 border border-uffa-navy/10 rounded-3xl p-8 shadow-xs flex flex-col justify-between">
               <div>
                 <span className="text-xs font-bold tracking-widest text-uffa-blue uppercase">Diretrizes de UX</span>
-                <h4 className="text-xl font-bold text-uffa-navy mt-1 mb-4">Requisitos Identificados para a Solução</h4>
+                <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark mt-1 mb-4">Requisitos Identificados para a Solução</h4>
                 <p className="text-xs md:text-sm text-uffa-navy/75 leading-relaxed mb-6">
                   Conclusões que irão orientar diretamente a ideação e a criação dos wireframes na próxima fase:
                 </p>

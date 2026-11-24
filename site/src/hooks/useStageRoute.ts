@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { Stage } from "../types";
+import { STAGES, AI_PAGE } from "../data/stages";
 
 function readStage(): Stage {
-  const hash = window.location.hash;
-  if (hash === "#/etapa-1") return "etapa-1";
-  if (hash === "#/etapa-2") return "etapa-2";
-  return "home";
+  const id = window.location.hash.replace("#/", "");
+  if (id === AI_PAGE.id) return AI_PAGE.id;
+  const found = STAGES.find((s) => s.id === id);
+  return found ? found.id : "home";
 }
 
 export function useStageRoute() {

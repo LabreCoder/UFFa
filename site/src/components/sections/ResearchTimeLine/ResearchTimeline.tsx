@@ -1,6 +1,5 @@
 import { SectionHeader } from "../../ui/SectionHeader";
 import { Badge } from "../../ui/Badge";
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 
 const RESEARCH_STEPS = [
@@ -58,8 +57,7 @@ const RESEARCH_STEPS = [
 
 export function ResearchTimeline() {
   return (
-    <SectionDefault id="pesquisa" colorDefault="bg-uffa-coral/30">
-      <SectionImage image="image1" />
+    <SectionDefault id="pesquisa" colorDefault="bg-uffa-lightblue">
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Nossa Pesquisa"
@@ -76,11 +74,7 @@ export function ResearchTimeline() {
             {RESEARCH_STEPS.map((step, i) => (
               <div key={i} className="relative flex gap-6 md:gap-8 items-start w-full">
                 <div
-                  className="hidden md:flex shrink-0 w-12 h-12 rounded-full border-2 items-center justify-center z-10 mt-1 shadow-xs"
-                  style={{
-                    backgroundColor: step.done ? "var(--color-uffa-blue)" : "var(--color-uffa-bg)",
-                    borderColor: step.done ? "var(--color-uffa-blue)" : "rgba(10, 24, 40, 0.2)",
-                  }}
+                  className={`hidden md:flex shrink-0 w-12 h-12 rounded-full border-2 items-center justify-center z-10 mt-1 shadow-xs ${step.done ? "bg-uffa-blue border-uffa-blue" : "bg-uffa-bg border-uffa-navy/20"}`}
                 >
                   {step.done ? (
                     <svg width="18" height="18" viewBox="0 0 14 14" fill="none">
@@ -99,7 +93,7 @@ export function ResearchTimeline() {
                   }`}
                 >
                   <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="font-bold text-uffa-navy text-lg md:text-xl">{step.label}</h3>
+                    <h3 className="font-display text-2xl text-uffa-azulpetroleo-dark">{step.label}</h3>
                     {!step.done && (
                       <Badge variant="red" className="text-xs px-2.5 py-0.5">Próximos Passos</Badge>
                     )}

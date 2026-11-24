@@ -1,35 +1,41 @@
 import { useState, useEffect, useMemo } from "react";
-import { NAV_LINKS } from "../../data/navigtation";
+import { STAGES, AI_PAGE } from "../../data/stages";
 import { useScrollTo } from "../../hooks/useScrollTo";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import { SectionImage } from "../ui/SectionImage";
-import { NavLink } from "../../types";
+import { PageId, Stage } from "../../types";
+import { Logo } from "../ui/Logo";
+import { AiLink } from "../ui/AiLink";
 
 interface NavbarProps {
-  links?: NavLink[];
-  brandTarget?: string;
-  switchLabel?: string;
-  onSwitch?: () => void;
-  onHome?: () => void;
+  stage: PageId;
+  navigate: (stage: Stage) => void;
 }
 
-export function Navbar({
-  links = NAV_LINKS,
-  brandTarget = "#hero",
-  switchLabel,
-  onSwitch,
-  onHome,
-}: NavbarProps) {
+export function Navbar({ stage, navigate }: NavbarProps) {
+  const current = stage === AI_PAGE.id ? AI_PAGE : STAGES.find((s) => s.id === stage) ?? STAGES[0];
+  const onAiPage = stage === AI_PAGE.id;
+  const links = current.navLinks;
+  const brandTarget = current.brandTarget;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
   const { scrollTo } = useScrollTo();
   const sectionIds = useMemo(() => links.map((link) => link.href.replace("#", "")), [links]);
   const activeSection = useScrollSpy(sectionIds, 120);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 32);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 32);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+    };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   return (
@@ -44,23 +50,23 @@ export function Navbar({
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 xl:px-16 flex items-center justify-between h-16">
         <button
           onClick={() => scrollTo(brandTarget)}
-          className="font-display font-bold italic text-3xl text-uffa-navy tracking-tight hover:opacity-80 transition-opacity"
+          className="text-3xl tracking-tight hover:opacity-80 transition-opacity"
         >
-          Uffa
+          <Logo />
         </button>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden xl:flex items-center gap-5 2xl:gap-10">
           {links.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
               <li key={link.href}>
                 <button
                   onClick={() => scrollTo(link.href)}
-                  className={`text-base font-medium transition-colors duration-200 ${
+                  className={`whitespace-nowrap text-base font-medium transition-colors duration-200 ${
                     isActive
                       ? "text-uffa-blue font-semibold"
-                      : "text-black hover:text-uffa-blue"
+                      : "text-uffa-navy hover:text-uffa-blue"
                   }`}
                 >
                   {link.label}
@@ -68,33 +74,42 @@ export function Navbar({
               </li>
             );
           })}
-          {onHome && (
-            <li>
-              <button
-                onClick={onHome}
-                className="text-base font-medium text-black hover:text-uffa-blue transition-colors duration-200"
-              >
-                Início das etapas
-              </button>
-            </li>
-          )}
-          {onSwitch && switchLabel && (
-            <li>
-              <button
-                onClick={onSwitch}
-                className="text-sm font-semibold px-4 py-2 rounded-full bg-uffa-azulpetroleo text-white hover:opacity-90 transition-opacity"
-              >
-                {switchLabel}
-              </button>
-            </li>
-          )}
+          <li className="flex items-center gap-5 2xl:gap-10">
+            <span aria-hidden="true" className="h-6 w-px bg-uffa-navy/20" />
+            <AiLink label={AI_PAGE.label} active={onAiPage} onClick={() => navigate(AI_PAGE.id)} />
+          </li>
+          <li>
+            <button
+              onClick={() => navigate("home")}
+              className="whitespace-nowrap text-sm font-semibold px-4 py-2 rounded-full border-2 border-uffa-azulpetroleo text-uffa-azulpetroleo hover:bg-uffa-azulpetroleo/10 transition-colors duration-200"
+            >
+              Início das etapas
+            </button>
+          </li>
+          <li>
+            <div className="flex items-center gap-1 rounded-full border-2 border-uffa-azulpetroleo p-0.5">
+              {STAGES.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => navigate(s.id)}
+                  aria-current={s.id === stage ? "page" : undefined}
+                  className={`whitespace-nowrap text-sm font-semibold px-3 py-1.5 rounded-full transition-colors ${
+                    s.id === stage ? "bg-uffa-azulpetroleo text-white" : "text-uffa-azulpetroleo hover:bg-uffa-azulpetroleo/10"
+                  }`}
+                >
+                  {s.label}
+                </button>
+              ))}
+            </div>
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="xl:hidden flex flex-col gap-1.5 p-2.5"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Menu"
+          aria-expanded={menuOpen}
         >
           <span
             className={`block w-6 h-0.5 bg-uffa-navy transition-transform duration-200 ${
@@ -113,11 +128,11 @@ export function Navbar({
           />
         </button>
       </div>
-      <SectionImage image="image3" />
+      <div aria-hidden="true" className="absolute left-0 top-16 -mt-0.5 h-0.5 w-full origin-left bg-uffa-blue" style={{ transform: `scaleX(${progress})` }} />
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-uffa-bg border-t border-uffa-navy/10 px-6 py-4 flex flex-col gap-4 shadow-lg">
+        <div className="xl:hidden bg-uffa-bg border-t border-uffa-navy/10 px-6 py-4 flex flex-col gap-4 shadow-lg">
           {links.map((link) => (
             <button
               key={link.href}
@@ -125,27 +140,34 @@ export function Navbar({
                 scrollTo(link.href);
                 setMenuOpen(false);
               }}
-              className="text-base font-medium text-uffa-navy/70 hover:text-uffa-blue text-left transition-colors"
+              className={`text-base text-left transition-colors ${
+                activeSection === link.href.replace("#", "") ? "font-semibold text-uffa-blue" : "font-medium text-uffa-navy/70 hover:text-uffa-blue"
+              }`}
             >
               {link.label}
             </button>
           ))}
-          {onHome && (
+          <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-uffa-navy/10">
+            <AiLink label={AI_PAGE.label} active={onAiPage} onClick={() => navigate(AI_PAGE.id)} className="w-full" />
             <button
-              onClick={onHome}
-              className="text-base font-medium text-uffa-navy/70 hover:text-uffa-blue text-left transition-colors"
+              onClick={() => navigate("home")}
+              className="text-sm font-semibold px-4 py-2 rounded-full border-2 border-uffa-azulpetroleo text-uffa-azulpetroleo hover:bg-uffa-azulpetroleo/10 transition-colors"
             >
               Início das etapas
             </button>
-          )}
-          {onSwitch && switchLabel && (
-            <button
-              onClick={onSwitch}
-              className="text-base font-semibold text-uffa-blue text-left"
-            >
-              {switchLabel}
-            </button>
-          )}
+            {STAGES.map((s) => (
+              <button
+                key={s.id}
+                onClick={() => navigate(s.id)}
+                aria-current={s.id === stage ? "page" : undefined}
+                className={`text-sm font-semibold px-4 py-2 rounded-full border-2 border-uffa-azulpetroleo transition-colors ${
+                  s.id === stage ? "bg-uffa-azulpetroleo text-white" : "text-uffa-azulpetroleo hover:bg-uffa-azulpetroleo/10"
+                }`}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </nav>

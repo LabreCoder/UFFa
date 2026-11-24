@@ -10,7 +10,7 @@ const OUTCOME_STYLE = {
 
 export function Ideation() {
   return (
-    <SectionDefault id="ideacao" colorDefault="bg-uffa-lightblue/50">
+    <SectionDefault id="ideacao" colorDefault="bg-uffa-lightblue">
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Ideação"
@@ -46,7 +46,7 @@ export function Ideation() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {CRAZY_FOLLOWED.map((idea) => (
                 <Card key={idea.title} className="p-6 flex flex-col gap-3">
-                  <h4 className="font-display text-xl text-uffa-azulpetroleo-dark leading-snug">{idea.title}</h4>
+                  <h4 className="font-display text-2xl text-uffa-azulpetroleo-dark leading-snug">{idea.title}</h4>
                   <p className="text-uffa-navy/80 leading-relaxed">{idea.how}</p>
                   {idea.stage1 && (
                     <div className="mt-auto rounded-xl bg-uffa-lightblue p-4 flex flex-col gap-2">

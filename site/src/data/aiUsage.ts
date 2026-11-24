@@ -312,4 +312,20 @@ Crie um protótipo de UI responsivo de alta fidelidade, com foco em smartphones 
 * Mantenha os textos extremamente curtos e focados na ação. O design deve respeitar a pressa dos alunos entre as aulas e a alta demanda dos atendentes da equipe.
 * Acessibilidade: fontes a partir de 16px, contraste forte (4,5:1) e alvos de toque maiores que 44px. Elementos interativos devem ser óbvios.`,
   },
+  {
+    num: "06",
+    title: "Padronização Visual do Portfólio",
+    summary: "Revisão do visual das Etapas 1 e 2 para deixar o site padronizado de ponta a ponta, sem alterar nenhum texto já entregue.",
+    tool: "Claude (Claude Code)",
+    stage: "Etapa 3",
+    prompt: `"Este repositório é o site de um trabalho da faculdade (UFFa) que já foi entregue nas Etapas 1 e 2. Quero usar o plugin Project Builder, que eu criei, para testá-lo e, com ele, deixar o visual do site padronizado de um lado ao outro, corrigindo os pontos visuais e de código que estão desalinhados e mantendo a base do site. O site foi gerado no Figma Make e roda localmente em Docker; depois de atualizar aqui, vou copiar as alterações à mão de volta para o Figma Make, então tenha cuidado com qualquer sugestão e qualquer alteração. Depois disso, vamos adicionar a Etapa 3."`,
+  },
+  {
+    num: "07",
+    title: "Consolidação da Avaliação Heurística",
+    summary: "Leitura das avaliações dos colegas, do material de aula e do relatório de First Click para montar a lista consolidada, os gráficos e a página da Etapa 3.",
+    tool: "Claude (Claude Code)",
+    stage: "Etapa 3",
+    prompt: `"Monte a página da Etapa 3 do portfólio (avaliação heurística), seguindo o que a professora pediu: gerar a lista de heurísticas consolidada a partir das avaliações feitas pelos colegas e atualizar o portfólio com os resultados. Use como base a pasta da Etapa 3, que contém o material de aula com as heurísticas, as avaliações de cada colega e o relatório do teste First Click (que entra no final do site como curiosidade). Use também o portfólio de um semestre anterior como exemplo de como relatar a análise. A página deve ter gráficos por heurística e por severidade, de forma simples, objetiva e fiel aos dados. Antes de começar, avalie se é necessário criar agents."`,
+  },
 ];

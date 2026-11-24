@@ -1,5 +1,4 @@
-import { Navbar } from "../components/layout/Navbar";
-import { Footer } from "../components/layout/Footer";
+import { StageLayout } from "../components/layout/StageLayout";
 import { Hero } from "../components/sections/Hero/Hero";
 import { Problem } from "../components/sections/Problem/Problem";
 import { ResearchQuestion } from "../components/sections/ResearchQuestion/ResearchQuestion";
@@ -18,25 +17,17 @@ interface Props {
 
 export function Etapa1Page({ navigate }: Props) {
   return (
-    <>
-      <Navbar
-        switchLabel="Ver Etapa 2"
-        onSwitch={() => navigate("etapa-2")}
-        onHome={() => navigate("home")}
-      />
-      <main>
-        <Hero />
-        <Problem />
-        <ResearchQuestion />
-        <ResearchTimeline />
-        <CsdMatrix />
-        <CompetitiveAnalysis />
-        <EmpathyMap />
-        <ResearchInstruments />
-        <NextSteps />
-        <Team />
-      </main>
-      <Footer />
-    </>
+    <StageLayout stage="etapa-1" navigate={navigate}>
+      <Hero />
+      <Problem />
+      <ResearchQuestion />
+      <ResearchTimeline />
+      <CsdMatrix />
+      <CompetitiveAnalysis />
+      <EmpathyMap />
+      <ResearchInstruments />
+      <NextSteps />
+      <Team />
+    </StageLayout>
   );
 }

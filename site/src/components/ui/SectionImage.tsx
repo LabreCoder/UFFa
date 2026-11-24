@@ -8,7 +8,7 @@ const sectionImagePath = {
   image3: image3,
 }
 
-export function SectionImage({ image }: { image: string }) {
+export function SectionImage({ image }: { image: keyof typeof sectionImagePath }) {
   
   return (
     <div

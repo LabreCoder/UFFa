@@ -9,10 +9,10 @@ interface BadgeProps {
 export function Badge({ children, variant = "yellow", className = "" }: BadgeProps) {
   const variantStyles = {
     yellow: "bg-uffa-gold text-uffa-navy",
-    blue: "bg-uffa-blue text-uffa-blue",
-    coral: "bg-uffa-coral text-uffa-coral",
-    green: "bg-uffa-tractorgreen text-uffa-tractorgreen",
-    red: "bg-uffa-red text-black",
+    blue: "bg-uffa-blue text-white",
+    coral: "bg-uffa-coral text-uffa-navy",
+    green: "bg-uffa-tractorgreen text-uffa-navy",
+    red: "bg-uffa-red text-uffa-navy",
   };
 
   return (

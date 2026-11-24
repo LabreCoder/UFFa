@@ -2,10 +2,12 @@ import { SCENARIOS } from "../../../data/etapa2";
 import { SectionDefault } from "../../ui/SectionDefault";
 import { SectionHeader } from "../../ui/SectionHeader";
 import { Card } from "../../ui/Card";
+import { SectionImage } from "../../ui/SectionImage";
 
 export function Scenarios() {
   return (
-    <SectionDefault id="cenarios" className="relative pt-32 pb-20 px-6 md:px-12 xl:px-16">
+    <SectionDefault id="cenarios" className="relative pt-32 pb-20 px-6 md:px-12 xl:px-16" colorDefault="bg-uffa-white/70">
+      <SectionImage image="image1" />
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Cenários-problema"
@@ -23,7 +25,7 @@ export function Scenarios() {
                   {s.persona}
                 </span>
               </div>
-              <h3 className="font-display text-xl text-uffa-azulpetroleo-dark">{s.title}</h3>
+              <h3 className="font-display text-2xl text-uffa-azulpetroleo-dark">{s.title}</h3>
               <p className="text-uffa-navy/80 leading-relaxed">{s.problem}</p>
             </Card>
           ))}

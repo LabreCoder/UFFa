@@ -7,7 +7,7 @@ import { TechniqueTags } from "../../ui/TechniqueTags";
 
 export function Personas() {
   return (
-    <SectionDefault id="personas" colorDefault="bg-uffa-lightblue/50">
+    <SectionDefault id="personas" colorDefault="bg-uffa-lightblue">
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Personas"
@@ -53,7 +53,7 @@ export function Personas() {
                 </ul>
               </div>
 
-              <Badge variant={p.basisTone === "gold" ? "yellow" : "blue"} className="self-start !text-white">
+              <Badge variant={p.basisTone === "gold" ? "yellow" : "blue"} className="self-start">
                 {p.basis}
               </Badge>
 

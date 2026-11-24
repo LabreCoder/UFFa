@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { CSD_DATA, CSD_DATA_AFTER } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 import csdMatriz from "../../../../public/matriz-csd-uffa.pdf";
 
@@ -124,7 +123,6 @@ export function CsdMatrix() {
 
   return (
     <SectionDefault id="descobertas" colorDefault="bg-uffa-white/10">
-      <SectionImage image="image1" />
       
       {/* Contêiner padronizado globalmente */}
       <div className="relative z-10 max-w-screen-2xl mx-auto">
@@ -144,7 +142,7 @@ export function CsdMatrix() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "before"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Antes
@@ -154,7 +152,7 @@ export function CsdMatrix() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "after"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Depois
@@ -164,7 +162,7 @@ export function CsdMatrix() {
               className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all cursor-pointer ${
                 viewMode === "all"
                   ? `${color} text-white shadow-sm`
-                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-black/5"
+                  : "text-uffa-navy/70 hover:text-uffa-navy hover:bg-uffa-navy/5"
               }`}
             >
               Comparativo
@@ -230,7 +228,7 @@ export function CsdMatrix() {
           <a
             href={pdfDownloadUrl}
             download="Matriz-CSD-UFFa.pdf"
-            className={`inline-flex items-center gap-2.5 px-6 py-3 ${color} hover:bg-uffa-navy/90 text-white rounded-xl text-xs md:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow shrink-0 cursor-pointer`}
+            className="btn-primario shrink-0"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

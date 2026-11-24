@@ -49,7 +49,7 @@ export function DigitalPrototype() {
               href={FIGMA_PROTOTYPE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full bg-uffa-blue text-white font-bold hover:opacity-90 transition-opacity"
+              className="btn-primario"
             >
               Abrir protótipo no Figma ↗
             </a>

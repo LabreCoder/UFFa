@@ -18,7 +18,6 @@ export const ETAPA2_NAV_LINKS: NavLink[] = [
   { label: "Tarefas", href: "#tarefas" },
   { label: "Ideação", href: "#ideacao" },
   { label: "Protótipo Digital", href: "#prototipo-digital" },
-  { label: "Uso de IA", href: "#uso-de-ia" },
 ];
 
 // Link do protótipo navegável.

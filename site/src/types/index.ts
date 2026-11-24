@@ -58,7 +58,17 @@ export interface TeamMember {
   name: string;
   role: string;
 }
-export type Stage = "home" | "etapa-1" | "etapa-2";
+export type StageId = "etapa-1" | "etapa-2" | "etapa-3";
+export type PageId = StageId | "uso-de-ia";
+export type Stage = "home" | PageId;
+
+export interface StageInfo {
+  id: StageId;
+  label: string;
+  desc: string;
+  navLinks: NavLink[];
+  brandTarget: string;
+}
 
 export interface Persona {
   id: string;
@@ -131,6 +141,37 @@ export interface AiUsageItem {
   title: string;
   summary: string;
   tool: string;
-  stage: "Etapa 1" | "Etapa 2";
+  stage: "Etapa 1" | "Etapa 2" | "Etapa 3";
   prompt: string;
+}
+
+// Etapa 3 — avaliação heurística
+export type Severity = 1 | 2 | 3 | 4;
+
+export interface Heuristic {
+  id: number;
+  name: string;
+}
+
+export interface EvaluatorFinding {
+  evaluator: string;
+  severity: Severity;
+}
+
+export interface HeuristicProblem {
+  id: string;
+  problem: string;
+  screen: string;
+  heuristics: number[];
+  findings: EvaluatorFinding[];
+  recommendation: string;
+}
+
+export interface FirstClickTask {
+  id: string;
+  title: string;
+  target: string;
+  result: string;
+  confidence: number;
+  image: string;
 }

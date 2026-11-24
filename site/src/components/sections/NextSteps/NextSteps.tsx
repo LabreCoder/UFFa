@@ -1,16 +1,15 @@
 import { NEXT_STEPS } from "../../../data/research";
 import { SectionHeader } from "../../ui/SectionHeader";
-import { SectionImage } from "../../ui/SectionImage";
 import { SectionDefault } from "../../ui/SectionDefault";
 
 export function NextSteps() {
   return (
     <SectionDefault id="proximos" colorDefault="bg-uffa-navy">
-      <SectionImage image="image1" />
       <div className="relative z-10 max-w-screen-2xl mx-auto">
         <SectionHeader
           tag="Próximos Passos"
           tagColor="text-uffa-blue"
+          tone="dark"
           title={<span className="text-white">O que vem a seguir</span>}
           description="Com a pesquisa concluída e as personas, cenários e tarefas definidos, os passos seguintes traduzem as evidências em ideias e protótipos de interação."
           className="mb-14"
