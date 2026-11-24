@@ -1,3 +1,6 @@
 .UFFa_Figma/
 *.md
 .uffa_prototype/
+site/.figma/
+docs/
+.gitprompt/
